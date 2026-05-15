@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>MT Lavage Auto — FAQ</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#0b0f1a;--ink2:#1a2236;--muted:#64748b;--line:#e8ecf3;--bg:#f4f6fb;--white:#fff;--blue:#1d4ed8;--blue2:#2563eb;--sky:#38bdf8;--red:#e63946;--orange:#f97316;--green:#22c55e;--r:16px;--r2:26px;--sh:0 2px 18px rgba(11,15,26,.07);--sh2:0 10px 40px rgba(11,15,26,.13);--nav-h:68px;}
+html{scroll-behavior:smooth}
+body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-thumb{background:#c7d0e0;border-radius:3px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.fu{animation:fadeUp .65s cubic-bezier(.22,.68,0,1.2) both}
+.d1{animation-delay:.08s}.d2{animation-delay:.16s}.d3{animation-delay:.24s}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(232,236,243,.7);transition:box-shadow .3s;}
+nav.sc{box-shadow:var(--sh2)}
+.nav-logo img{height:38px;filter:drop-shadow(0 1px 4px rgba(0,0,0,.12))}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-links a{display:inline-flex;align-items:center;gap:6px;color:var(--ink2);font-size:13px;font-weight:600;text-decoration:none;padding:8px 14px;border-radius:10px;transition:.18s;white-space:nowrap;}
+.nav-links a:hover{background:var(--bg);color:var(--blue2)}
+.nav-links a.active{color:var(--blue2);background:rgba(37,99,235,.07)}
+.nav-rdv{display:inline-flex;align-items:center;gap:8px;background:var(--blue2);color:white;padding:10px 20px;border-radius:40px;text-decoration:none;font-size:13px;font-weight:700;border:none;cursor:pointer;font-family:'Sora',sans-serif;transition:.2s;margin-left:8px;}
+.nav-rdv:hover{background:var(--blue);transform:translateY(-1px);box-shadow:0 4px 16px rgba(37,99,235,.35)}
+.nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;border-radius:8px;}
+.nav-burger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.nav-burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-mobile{display:none;position:fixed;top:var(--nav-h);left:0;right:0;z-index:190;background:white;border-bottom:1px solid var(--line);padding:12px 16px 20px;box-shadow:0 12px 40px rgba(11,15,26,.12);flex-direction:column;gap:4px;}
+.nav-mobile.open{display:flex}
+.nav-mobile a{display:flex;align-items:center;gap:10px;color:var(--ink2);font-size:15px;font-weight:600;text-decoration:none;padding:13px 16px;border-radius:12px;transition:.18s;}
+.nav-mobile a:hover{background:var(--bg);color:var(--blue2)}
+.nav-mobile a.active{color:var(--blue2);background:rgba(37,99,235,.07)}
+.nav-mobile-rdv{margin-top:8px;width:100%;padding:14px;background:var(--blue2);color:white;border:none;border-radius:50px;font-family:'Sora',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:.2s;}
+.nav-mobile-rdv:hover{background:var(--blue)}
+.nav-overlay{display:none;position:fixed;inset:0;top:var(--nav-h);z-index:180;background:rgba(11,15,26,.35);backdrop-filter:blur(2px)}
+.nav-overlay.open{display:block}
+@media(max-width:780px){.nav-links{display:none}.nav-burger{display:flex}nav{padding:0 20px}}
+
+/* PAGE HERO */
+.page-hero{background:linear-gradient(150deg,#060c1c 0%,#0c1d48 45%,#071022 100%);padding:130px 24px 60px;text-align:center;position:relative;overflow:hidden;}
+.page-hero-orb1{position:absolute;top:-60px;left:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(29,78,216,.2) 0%,transparent 65%);pointer-events:none}
+.page-hero-orb2{position:absolute;bottom:-40px;right:-60px;width:350px;height:350px;background:radial-gradient(circle,rgba(56,189,248,.13) 0%,transparent 65%);pointer-events:none}
+.page-hero h1{font-family:'DM Serif Display',serif;font-size:clamp(32px,5vw,54px);color:white;line-height:1.1;margin-bottom:14px}
+.page-hero h1 span{background:linear-gradient(90deg,#93c5fd,#38bdf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.page-hero p{color:rgba(255,255,255,.55);font-size:16px;max-width:480px;margin:0 auto}
+
+/* SECTIONS */
+.sec{padding:52px 24px}
+.sec-c{max-width:1060px;margin:0 auto}
+.sec-hd{text-align:center;margin-bottom:32px}
+.label-tag{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue2);background:rgba(37,99,235,.08);border:1px solid rgba(37,99,235,.15);padding:6px 14px;border-radius:40px;margin-bottom:14px}
+.label-dot{width:6px;height:6px;background:var(--blue2);border-radius:50%}
+h2.sh{font-family:'DM Serif Display',serif;font-size:clamp(26px,4vw,42px);line-height:1.15;color:var(--ink);margin-bottom:12px}
+h2.sh span{color:var(--blue2)}
+.sh-sub{color:var(--muted);font-size:15px;max-width:480px;margin:0 auto;font-weight:300}
+
+/* CTA / FOOTER */
+.cta-band{background:linear-gradient(135deg,#0f1f45,#1d3a8a);padding:52px 24px;text-align:center}
+.cta-band h2{font-family:'DM Serif Display',serif;font-size:clamp(26px,4vw,42px);color:white;margin-bottom:14px}
+.cta-band p{color:rgba(255,255,255,.55);font-size:16px;max-width:480px;margin:0 auto 34px}
+.cta-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.cta-btn-main{display:inline-flex;align-items:center;gap:9px;background:white;color:var(--ink);padding:14px 28px;border-radius:50px;font-size:15px;font-weight:700;text-decoration:none;border:none;cursor:pointer;transition:.22s;font-family:'Sora',sans-serif}
+.cta-btn-main:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(255,255,255,.2)}
+.cta-btn-main img{height:20px}
+.cta-btn-sec{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.1);color:white;padding:14px 28px;border-radius:50px;font-size:15px;font-weight:600;text-decoration:none;border:1px solid rgba(255,255,255,.2);cursor:pointer;transition:.22s}
+.cta-btn-sec:hover{background:rgba(255,255,255,.18);transform:translateY(-3px)}
+footer{background:var(--ink2);color:rgba(255,255,255,.45);padding:32px 24px;text-align:center;font-size:13px;line-height:2.2}
+footer strong{color:rgba(255,255,255,.8)}
+.foot-logo{margin-bottom:14px}.foot-logo img{height:42px;opacity:.85}
+.foot-sep{width:48px;height:2px;background:var(--blue2);margin:14px auto;border-radius:2px;opacity:.4}
+
+/* MODAL */
+.modal{display:none;position:fixed;inset:0;background:rgba(11,15,26,.75);backdrop-filter:blur(5px);justify-content:center;align-items:center;z-index:999;padding:16px}
+.modal-box{background:white;border-radius:var(--r2);padding:28px 28px 24px;width:min(480px,100%);box-shadow:var(--sh2);animation:fadeUp .35s both;max-height:90vh;overflow-y:auto}
+.mb-progress{display:flex;align-items:center;margin-bottom:28px}
+.mb-step{display:flex;flex-direction:column;align-items:center;gap:4px}
+.mb-step-num{width:32px;height:32px;border-radius:50%;background:var(--line);color:var(--muted);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;transition:.3s}
+.mb-step.active .mb-step-num{background:var(--blue2);color:white;box-shadow:0 2px 10px rgba(37,99,235,.35)}
+.mb-step.done .mb-step-num{background:var(--green);color:white}
+.mb-step-label{font-size:10px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.mb-step.active .mb-step-label{color:var(--blue2)}
+.mb-line{flex:1;height:2px;background:var(--line);margin:0 6px;margin-bottom:14px;transition:.3s}.mb-line.done{background:var(--green)}
+.mb-title{font-family:'DM Serif Display',serif;font-size:20px;color:var(--ink);margin-bottom:14px}
+.mb-back{background:none;border:none;cursor:pointer;font-family:'Sora',sans-serif;font-size:13px;font-weight:600;color:var(--muted);padding:0;margin-bottom:14px;display:flex;align-items:center;gap:4px;transition:.2s}.mb-back:hover{color:var(--blue2)}
+.mb-close-top{margin-top:14px;width:100%;padding:9px;background:transparent;border:1.5px solid var(--line);border-radius:50px;cursor:pointer;font-family:'Sora',sans-serif;font-size:13px;color:var(--muted);transition:.2s}.mb-close-top:hover{background:var(--bg)}
+.mb-formula-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mb-formula-btn{border-radius:16px;border:2px solid var(--line);padding:18px 10px 14px;cursor:pointer;transition:.22s;display:flex;flex-direction:column;align-items:center;gap:6px;font-family:'Sora',sans-serif;position:relative;overflow:hidden}.mb-formula-btn:hover{transform:translateY(-4px);box-shadow:var(--sh2)}
+.mf-red{background:linear-gradient(145deg,#fff0f1,#ffd6d9);border-color:rgba(230,57,70,.25)}.mf-red .mf-name{color:#c0202e}.mf-red .mf-price{color:rgba(192,32,46,.65)}
+.mf-orange{background:linear-gradient(145deg,#fff3e8,#ffe0c2);border-color:rgba(249,115,22,.3)}.mf-orange .mf-name{color:#c2440a}.mf-orange .mf-price{color:rgba(194,68,10,.65)}
+.mf-blue{background:linear-gradient(145deg,#eff6ff,#dbeafe);border-color:rgba(37,99,235,.2)}.mf-blue .mf-name{color:#1d4ed8}.mf-blue .mf-price{color:rgba(29,78,216,.65)}
+.mf-name{font-size:13px;font-weight:800}.mf-price{font-size:11px;font-weight:600}
+.mf-ico-wrap{width:44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:2px}
+.mf-ico-red{background:rgba(230,57,70,.12)}.mf-ico-orange{background:rgba(249,115,22,.12)}.mf-ico-blue{background:rgba(37,99,235,.1)}
+.mb-pop{position:absolute;top:5px;right:6px;background:var(--orange);color:white;font-size:9px;font-weight:700;padding:2px 7px;border-radius:10px}
+.mb-veh-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mb-veh-btn{border-radius:16px;border:2px solid var(--line);background:var(--bg);padding:18px 12px;cursor:pointer;transition:.22s;display:flex;flex-direction:column;align-items:center;gap:5px;font-family:'Sora',sans-serif}.mb-veh-btn:hover{border-color:var(--blue2);background:#eff6ff;transform:translateY(-3px);box-shadow:var(--sh2)}
+.mv-emoji{font-size:32px}.mv-name{font-size:14px;font-weight:700;color:var(--ink)}.mv-ex{font-size:11px;color:var(--muted)}
+.poil-choice{width:100%;display:flex;align-items:center;justify-content:space-between;padding:15px 18px;border-radius:var(--r);border:2px solid var(--line);background:var(--white);cursor:pointer;font-family:'Sora',sans-serif;transition:.22s;text-align:left;margin-bottom:8px}.poil-choice:hover{transform:translateY(-2px);box-shadow:var(--sh2)}
+.poil-no:hover{border-color:var(--green);background:rgba(34,197,94,.05)}.poil-yes:hover{border-color:var(--orange);background:rgba(249,115,22,.05)}
+.pc-left{display:flex;align-items:center;gap:12px}
+.pc-icon-wrap{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.pc-icon-green{background:rgba(34,197,94,.1)}.pc-icon-orange{background:rgba(249,115,22,.1)}
+.pc-title{font-size:14px;font-weight:700;color:var(--ink)}.pc-sub{font-size:12px;color:var(--muted)}
+.pc-tag{font-size:11px;font-weight:800;padding:4px 10px;border-radius:20px;flex-shrink:0}
+.pc-tag-green{background:rgba(34,197,94,.12);color:var(--green)}.pc-tag-orange{background:rgba(249,115,22,.12);color:var(--orange)}
+.poils-or{text-align:center;font-size:12px;color:var(--muted);margin:2px 0 8px;font-weight:600}
+.poils-qty-title{font-size:13px;font-weight:700;color:var(--ink);text-align:center;margin:16px 0 12px;padding-top:14px;border-top:1px solid var(--line)}
+.poils-qty-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.poils-qty-btn{display:flex;flex-direction:column;align-items:center;gap:6px;padding:18px 12px;border-radius:var(--r);border:2px solid var(--line);background:var(--bg);cursor:pointer;font-family:'Sora',sans-serif;transition:.22s}.poils-qty-btn:hover{border-color:var(--orange);background:rgba(249,115,22,.06);transform:translateY(-3px);box-shadow:var(--sh2)}
+.pqb-icon{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;margin-bottom:2px}
+.pqb-icon-few{background:rgba(249,115,22,.1);color:var(--orange)}.pqb-icon-many{background:rgba(249,115,22,.2);color:var(--orange);font-size:8px;letter-spacing:1px}
+.pqb-name{font-size:13px;font-weight:700;color:var(--ink);text-align:center}.pqb-price{font-size:14px;font-weight:800;color:var(--orange)}
+.mb-recap{background:linear-gradient(135deg,#eff6ff,#f0f9ff);border:1.5px solid rgba(37,99,235,.15);border-radius:var(--r);padding:12px 16px;margin-bottom:18px;font-size:14px;color:var(--ink2);font-weight:600;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.recap-price-tag{font-size:22px;font-weight:800;color:var(--blue2)}
+.mb-recap-full{background:var(--bg);border:1.5px solid var(--line);border-radius:var(--r);padding:14px 16px;margin-bottom:18px;display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--muted)}.mb-recap-full strong{color:var(--ink);font-weight:700}
+.recap-row{display:flex;align-items:center;gap:8px}
+.mb-label{display:block;font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
+.m-field{width:100%;padding:12px 15px;border:1.5px solid var(--line);border-radius:var(--r);font-family:'Sora',sans-serif;font-size:14px;color:var(--ink);margin-bottom:11px;outline:none;transition:.2s}.m-field:focus{border-color:var(--blue2);box-shadow:0 0 0 3px rgba(37,99,235,.1)}
+.mb-next-btn{width:100%;padding:13px;background:var(--blue2);color:white;border:none;border-radius:50px;cursor:pointer;font-family:'Sora',sans-serif;font-size:14px;font-weight:700;margin-top:16px;transition:.2s}.mb-next-btn:hover{background:var(--blue);transform:translateY(-1px)}
+.m-btns{display:flex;gap:10px;margin:6px 0 10px}
+.m-btns button{flex:1;padding:12px;border:none;border-radius:50px;cursor:pointer;font-size:14px;font-weight:700;font-family:'Sora',sans-serif;transition:.2s;display:flex;align-items:center;justify-content:center;gap:6px}.m-btns button:hover{filter:brightness(1.07);transform:scale(1.02)}
+.sms-b{background:#25D366;color:white}.mail-b{background:var(--ink);color:white}
+.close-b{width:100%;padding:10px;background:transparent;border:1.5px solid var(--line);border-radius:50px;cursor:pointer;font-family:'Sora',sans-serif;font-size:13px;font-weight:500;color:var(--muted);transition:.2s}.close-b:hover{background:var(--bg)}
+.cal-inline{background:#f8faff;border:1.5px solid rgba(37,99,235,.15);border-radius:var(--r2);overflow:hidden;margin-bottom:14px}
+.cal-header{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:white;border-bottom:1px solid var(--line)}
+.cal-month-label{font-size:14px;font-weight:700;color:var(--ink);text-align:center;flex:1}
+.cal-nav{background:none;border:1.5px solid var(--line);border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:16px;color:var(--muted);display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;transition:.2s;line-height:1;padding:0;flex-shrink:0}.cal-nav:hover{border-color:var(--blue2);color:var(--blue2);background:#eff6ff}
+.cal-weekdays{display:grid;grid-template-columns:repeat(7,1fr);padding:8px 8px 2px;background:white;border-bottom:1px solid var(--line)}
+.cal-weekdays span{text-align:center;font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;padding:2px 0}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);padding:6px 8px 8px;gap:1px}
+.cal-day{aspect-ratio:1;display:flex;align-items:center;justify-content:center;border-radius:50%;cursor:pointer;font-size:13px;font-weight:500;color:var(--ink);border:none;background:none;font-family:'Sora',sans-serif;transition:.15s;min-width:0}
+.cal-day:hover:not(.cal-day-disabled):not(.cal-day-other){background:#dbeafe;color:var(--blue2);font-weight:700}
+.cal-day-today{background:#eff6ff;color:var(--blue2);font-weight:700;border:1.5px solid rgba(37,99,235,.35)}
+.cal-day-selected{background:var(--blue2)!important;color:white!important;font-weight:700!important;box-shadow:0 2px 8px rgba(37,99,235,.35)}
+.cal-day-disabled{color:#d1d5db;cursor:not-allowed;font-weight:400}.cal-day-other{color:#e5e7eb;cursor:default}
+.cal-selected-display{padding:10px 16px;background:white;border-top:1px solid var(--line);font-size:13px;font-weight:500;color:var(--muted);text-align:center}.cal-sel-filled{color:var(--blue2)!important;font-weight:700!important}
+.van-contact-box{text-align:center;padding:10px 0}.van-contact-icon{font-size:52px;margin-bottom:12px}
+.van-contact-title{font-family:'DM Serif Display',serif;font-size:20px;color:var(--ink);margin-bottom:8px}
+.van-contact-sub{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:24px;max-width:320px;margin-left:auto;margin-right:auto}
+.van-btns{display:flex;gap:12px;margin-bottom:12px}
+.van-btn-sms{flex:1;padding:13px;background:#25D366;color:white;border:none;border-radius:50px;cursor:pointer;font-family:'Sora',sans-serif;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:8px;transition:.2s}
+.van-btn-mail{flex:1;padding:13px;background:var(--ink);color:white;border:none;border-radius:50px;cursor:pointer;font-family:'Sora',sans-serif;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:8px;transition:.2s}
+.slot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+.slot-btn{display:flex;flex-direction:column;align-items:center;gap:5px;padding:16px 10px;border-radius:16px;border:2px solid var(--line);background:var(--bg);cursor:pointer;font-family:'Sora',sans-serif;transition:.22s;position:relative;overflow:hidden}
+.slot-btn:hover{border-color:var(--blue2);background:#eff6ff;transform:translateY(-3px);box-shadow:var(--sh2)}
+.slot-btn.selected{border-color:var(--blue2);background:linear-gradient(145deg,#eff6ff,#dbeafe);box-shadow:0 4px 16px rgba(37,99,235,.2)}
+.slot-btn.selected::after{content:'✓';position:absolute;top:6px;right:8px;font-size:11px;font-weight:800;color:var(--blue2)}
+.slot-icon{font-size:22px;line-height:1}.slot-time{font-size:17px;font-weight:800;color:var(--ink);letter-spacing:.01em}.slot-label{font-size:10px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.slot-btn.selected .slot-time{color:var(--blue2)}.slot-btn.selected .slot-label{color:rgba(37,99,235,.7)}
+
+.faq-wrap{display:flex;flex-direction:column;gap:10px;max-width:760px;margin:0 auto}
+.faq-item{background:var(--white);border-radius:var(--r2);overflow:hidden;box-shadow:var(--sh);border:1.5px solid var(--line);transition:.2s}
+.faq-item:hover{box-shadow:var(--sh2)}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;padding:18px 22px;background:transparent;border:none;cursor:pointer;font-family:'Sora',sans-serif;font-size:15px;font-weight:600;color:var(--ink);text-align:left;gap:12px;transition:.2s}
+.faq-q:hover{color:var(--blue2)}
+.faq-ico{font-size:20px;font-weight:300;color:var(--muted);transition:.3s;flex-shrink:0;line-height:1}
+.faq-item.open .faq-ico{transform:rotate(45deg);color:var(--blue2)}
+.faq-a{max-height:0;overflow:hidden;font-size:14px;color:var(--muted);line-height:1.7;padding:0 22px;transition:max-height .4s cubic-bezier(.22,.68,0,1.2),padding .3s}
+.faq-item.open .faq-a{max-height:300px;padding:0 22px 20px}
+.faq-item.open .faq-q{color:var(--blue2)}
+.faq-item.open{border-color:rgba(37,99,235,.2)}
+
+@media(max-width:600px){nav{padding:0 16px}.sec{padding:36px 16px}.page-hero{padding:100px 16px 48px}.modal-box{padding:20px 16px 18px;border-radius:20px}.mb-step-label{font-size:8px}.mb-step-num{width:26px;height:26px;font-size:11px}.mb-formula-grid{gap:8px}.mb-formula-btn{padding:14px 8px 12px}.mf-name{font-size:12px}.mf-price{font-size:10px}.mb-veh-grid{gap:8px}.mb-veh-btn{padding:14px 10px}.mv-emoji{font-size:26px}.mv-name{font-size:12px}.mv-ex{font-size:10px}.slot-btn{padding:14px 8px;border-radius:14px}.slot-icon{font-size:18px}.slot-time{font-size:15px}.slot-label{font-size:9px}}
+
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo"><img src="https://i.imgur.com/oPar5g4.png" alt="MT Lavage Auto"></a>
+  <div class="nav-links">
+    <a href="index.html">🏠 Accueil</a>
+    <a href="tarifs.html">💶 Tarifs</a>
+    <a href="resultats.html">✨ Résultats clients</a>
+    <a href="apropos.html">👋 À propos</a>
+    <a href="faq.html" class="active">❓ FAQ</a>
+  </div>
+  <button class="nav-rdv" onclick="openBooking(null)">Prendre RDV</button>
+  <button class="nav-burger" id="burger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-overlay" id="overlay" onclick="toggleMenu()"></div>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html">🏠 Accueil</a>
+  <a href="tarifs.html">💶 Tarifs</a>
+  <a href="resultats.html">✨ Résultats clients</a>
+  <a href="apropos.html">👋 À propos</a>
+  <a href="faq.html" class="active">❓ FAQ</a>
+  <button class="nav-mobile-rdv" onclick="toggleMenu();openBooking(null)">📅 Prendre rendez-vous</button>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-orb1"></div><div class="page-hero-orb2"></div>
+  <div class="label-tag fu" style="background:rgba(37,99,235,.15);border-color:rgba(37,99,235,.3);color:#93c5fd"><span style="width:6px;height:6px;background:#93c5fd;border-radius:50%;display:inline-block"></span>&nbsp;Questions fréquentes</div>
+  <h1 class="fu d1">Vos questions,<br><span>nos réponses</span></h1>
+  <p class="fu d2">Tout ce que vous devez savoir avant de réserver</p>
+</div>
+
+<div class="sec" style="background:var(--bg)">
+  <div class="sec-c">
+    <div class="faq-wrap">
+      <div class="faq-item"><button class="faq-q">Vous venez avec votre propre matériel ?<span class="faq-ico">+</span></button><div class="faq-a">Oui, je me déplace avec tout le matériel : aspirateur, produits professionnels, microfibres… Vous n'avez rien à prévoir.</div></div>
+      <div class="faq-item"><button class="faq-q">Combien de temps dure une prestation ?<span class="faq-ico">+</span></button><div class="faq-a">Comptez 1h à 2h pour un lavage intérieur ou extérieur, et 2h à 3h pour la formule Complète. Cela varie selon l'état du véhicule.</div></div>
+      <div class="faq-item"><button class="faq-q">Intervenez-vous partout autour de Lunéville ?<span class="faq-ico">+</span></button><div class="faq-a">J'interviens dans un rayon de 25 km autour de Lunéville : Dombasle-sur-Meurthe, Baccarat, Saint-Nicolas-de-Port, Bayon, Blâmont… Au-delà de 25 km, un supplément de 0,50€/km s'applique.</div></div>
+      <div class="faq-item"><button class="faq-q">Comment se passe le paiement ?<span class="faq-ico">+</span></button><div class="faq-a">Le paiement se fait sur place, après la prestation. J'accepte les espèces et la carte bancaire. Aucun acompte demandé.</div></div>
+      <div class="faq-item"><button class="faq-q">Est-ce que le résultat est garanti ?<span class="faq-ico">+</span></button><div class="faq-a">Oui ! Si vous n'êtes pas satisfait, je corrige sur place sans supplément. Votre satisfaction est ma priorité absolue.</div></div>
+      <div class="faq-item"><button class="faq-q">Quels sont les créneaux disponibles ?<span class="faq-ico">+</span></button><div class="faq-a">Je propose 3 créneaux par jour, 7j/7 : matin (8h30), après-midi (12h30) et fin de journée (16h30). Vous choisissez directement lors de la réservation.</div></div>
+      <div class="faq-item"><button class="faq-q">Faut-il une prise électrique ?<span class="faq-ico">+</span></button><div class="faq-a">Oui, une prise électrique accessible est indispensable pour réaliser la prestation. Merci d'en tenir compte lors de la réservation.</div></div>
+      <div class="faq-item"><button class="faq-q">Comment prendre rendez-vous ?<span class="faq-ico">+</span></button><div class="faq-a">Cliquez sur "Prendre RDV", choisissez votre formule, véhicule, date et horaire. Un message est automatiquement pré-rempli — il vous suffit d'appuyer sur Envoyer par SMS ou Email. Je confirme rapidement.</div></div>
+      <div class="faq-item"><button class="faq-q">Puis-je commander pour plusieurs véhicules ?<span class="faq-ico">+</span></button><div class="faq-a">Tout à fait ! Contactez-moi directement par email pour un devis adapté à votre flotte.</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-band">
+  <h2>Prêt pour une voiture<br>comme neuve ?</h2>
+  <p>Réservez en 30 secondes — votre message est pré-rempli automatiquement.</p>
+  <div class="cta-btns">
+    <button class="cta-btn-main" onclick="openBooking(null)"><img src="https://i.imgur.com/CaOo0Al.png" alt="">Prendre rendez-vous</button>
+    <a href="tel:+330778043568" class="cta-btn-sec">📞 Appeler</a>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-logo"><img src="https://i.imgur.com/oPar5g4.png" alt="MT Lavage Auto"></div>
+  <div class="foot-sep"></div>
+  <p><strong>MT Lavage Auto</strong> — Lavage automobile à domicile</p>
+  <p><strong>Email :</strong> mt.lavage.auto.54@gmail.com &nbsp;·&nbsp; <strong>Zone :</strong> Lunéville &amp; 25 km alentours</p>
+  <p><strong>TVA :</strong> TVA non applicable, art. 293B du CGI</p>
+</footer>
+
+<!-- MODAL (identique sur toutes les pages) -->
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <div class="mb-progress">
+      <div class="mb-step" id="prog-1"><div class="mb-step-num">1</div><div class="mb-step-label">Formule</div></div><div class="mb-line" id="mbl-1"></div>
+      <div class="mb-step" id="prog-2"><div class="mb-step-num">2</div><div class="mb-step-label">Véhicule</div></div><div class="mb-line" id="mbl-2"></div>
+      <div class="mb-step" id="prog-25"><div class="mb-step-num">3</div><div class="mb-step-label">Options</div></div><div class="mb-line" id="mbl-25"></div>
+      <div class="mb-step" id="prog-3"><div class="mb-step-num">4</div><div class="mb-step-label">Créneau</div></div><div class="mb-line" id="mbl-3"></div>
+      <div class="mb-step" id="prog-4"><div class="mb-step-num">5</div><div class="mb-step-label">Confirmer</div></div>
+    </div>
+    <div id="screen-1"><div class="mb-title">Quelle formule ?</div><div class="mb-formula-grid"><button class="mb-formula-btn mf-red" onclick="pickFormule('Intérieur')"><div class="mf-ico-wrap mf-ico-red"><img src="https://i.imgur.com/vLcJWDh.png" style="height:26px"></div><span class="mf-name">Intérieur</span><span class="mf-price">dès 45€</span></button><button class="mb-formula-btn mf-orange" onclick="pickFormule('Complet')" style="position:relative"><span class="mb-pop">🔥</span><div class="mf-ico-wrap mf-ico-orange"><img src="https://i.imgur.com/0yZv1u9.png" style="height:26px"></div><span class="mf-name">Complet</span><span class="mf-price">dès 75€</span></button><button class="mb-formula-btn mf-blue" onclick="pickFormule('Extérieur')"><div class="mf-ico-wrap mf-ico-blue"><img src="https://i.imgur.com/jEgsTM9.png" style="height:26px"></div><span class="mf-name">Extérieur</span><span class="mf-price">dès 40€</span></button></div><button class="mb-close-top" onclick="closeModal()">✕ Fermer</button></div>
+    <div id="screen-2" style="display:none"><button class="mb-back" onclick="goStep(1)">← Retour</button><div class="mb-title">Quel est votre véhicule ?</div><div class="mb-veh-grid"><button class="mb-veh-btn" onclick="pickVehicle('Citadine')"><span class="mv-emoji">🚗</span><span class="mv-name">Citadine</span><span class="mv-ex">Clio, Polo, 208…</span></button><button class="mb-veh-btn" onclick="pickVehicle('Berline & Compacte')"><span class="mv-emoji">🚙</span><span class="mv-name">Berline &amp; Compacte</span><span class="mv-ex">Golf, 308, Classe A…</span></button><button class="mb-veh-btn" onclick="pickVehicle('SUV & Monospace')"><span class="mv-emoji">🚐</span><span class="mv-name">SUV &amp; Monospace</span><span class="mv-ex">Kadjar, 3008, Q3…</span></button><button class="mb-veh-btn" onclick="pickVehicle('Utilitaire & Van')" style="border-color:rgba(249,115,22,.3);background:linear-gradient(145deg,#fff8f1,#fff0e0)"><span class="mv-emoji">🚚</span><span class="mv-name" style="color:#c2440a">Utilitaire &amp; Van</span><span class="mv-ex" style="color:var(--orange);font-weight:600">Contactez-moi</span></button></div></div>
+    <div id="screen-van" style="display:none"><button class="mb-back" onclick="goStep(2)">← Retour</button><div class="van-contact-box"><div class="van-contact-icon">🚚</div><div class="van-contact-title">Utilitaire &amp; Van</div><div class="van-contact-sub">Les tarifs pour ce type de véhicule sont établis sur devis. Contactez-moi directement par SMS ou par email.</div><div class="van-btns"><button class="van-btn-sms" onclick="contactVanSMS()">📱 SMS</button><button class="van-btn-mail" onclick="contactVanMail()">✉️ Email</button></div><button class="close-b" onclick="closeModal()">Fermer</button></div></div>
+    <div id="screen-25" style="display:none"><button class="mb-back" onclick="goStep(2)">← Retour</button><div class="mb-title">Options <span id="opt-title-badge"></span></div><div id="poils-section"><p style="font-size:13px;color:var(--muted);margin-bottom:20px">Votre animal laisse des poils dans l'habitacle ?</p><button class="poil-choice poil-no" onclick="pickPoils(false)"><div class="pc-left"><div class="pc-icon-wrap pc-icon-green">🚗</div><div><div class="pc-title">Sans option poils</div><div class="pc-sub">Lavage standard — déjà inclus</div></div></div><span class="pc-tag pc-tag-green">Inclus</span></button><div class="poils-or">— ou —</div><button class="poil-choice poil-yes" onclick="showPoilsLevel()"><div class="pc-left"><div class="pc-icon-wrap pc-icon-orange">🐾</div><div><div class="pc-title">Avec option poils</div><div class="pc-sub">Traitement anti-poils en profondeur</div></div></div><span class="pc-tag pc-tag-orange">+20€ / +35€</span></button><div id="poils-level" style="display:none"><div class="poils-qty-title">Quelle quantité de poils ?</div><div class="poils-qty-grid"><button class="poils-qty-btn" onclick="pickPoilsLevel('Peu de poils',20)"><div class="pqb-icon pqb-icon-few">◎</div><span class="pqb-name">Peu de poils</span><span class="pqb-price">+20€</span></button><button class="poils-qty-btn" onclick="pickPoilsLevel('Beaucoup de poils',35)"><div class="pqb-icon pqb-icon-many">●●●</div><span class="pqb-name">Beaucoup de poils</span><span class="pqb-price">+35€</span></button></div></div></div><div id="ext-section" style="display:none"><p style="font-size:13px;color:var(--muted);margin-bottom:20px">Aucune option supplémentaire pour le lavage extérieur.</p><button class="mb-next-btn" onclick="bk.poilsOption=null;goStep(3)">Continuer →</button></div></div>
+    <div id="screen-3" style="display:none"><button class="mb-back" onclick="goStep(25)">← Retour</button><div class="mb-title">Choisissez votre créneau</div><div class="mb-recap" id="recap-price"></div><label class="mb-label">📅 Date souhaitée</label><div class="cal-inline" id="cal-inline"><div class="cal-header"><button class="cal-nav" onclick="calNav(-1)" type="button">‹</button><span class="cal-month-label" id="cal-month-label"></span><button class="cal-nav" onclick="calNav(1)" type="button">›</button></div><div class="cal-weekdays"><span>Lu</span><span>Ma</span><span>Me</span><span>Je</span><span>Ve</span><span>Sa</span><span>Di</span></div><div class="cal-grid" id="cal-grid"></div><div class="cal-selected-display" id="cal-selected-display">Aucune date sélectionnée</div></div><label class="mb-label">⏰ Créneau horaire</label><div class="slot-grid"><button class="slot-btn" onclick="pickSlot(this,'8h30')"><span class="slot-icon">🌅</span><span class="slot-time">8h30</span><span class="slot-label">Matin</span></button><button class="slot-btn" onclick="pickSlot(this,'12h30')"><span class="slot-icon">☀️</span><span class="slot-time">12h30</span><span class="slot-label">Après-midi</span></button><button class="slot-btn" onclick="pickSlot(this,'16h30')"><span class="slot-icon">🌆</span><span class="slot-time">16h30</span><span class="slot-label">Fin de journée</span></button></div><input type="hidden" id="mb-time" value=""><div style="display:flex;align-items:flex-start;gap:10px;background:rgba(249,115,22,.07);border:1px solid rgba(249,115,22,.25);border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:12px;color:var(--ink);line-height:1.6"><span style="font-size:18px;flex-shrink:0">⚡</span><span>Pensez à vérifier qu'une <strong>prise électrique accessible</strong> est disponible à l'adresse d'intervention.</span></div><button class="mb-next-btn" onclick="goStep(4)">Suivant →</button></div>
+    <div id="screen-4" style="display:none"><button class="mb-back" onclick="goStep(3)">← Retour</button><div class="mb-title">Votre adresse</div><div class="mb-recap-full" id="recap-full"></div><label class="mb-label" style="color:var(--red)">📍 Adresse complète d'intervention</label><input type="text" id="mb-address" class="m-field" placeholder="Ex : 12 rue des Fleurs, Lunéville"><div style="display:flex;align-items:flex-start;gap:9px;background:rgba(230,57,70,.06);border:1px solid rgba(230,57,70,.3);border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:13px;color:var(--ink2);line-height:1.6"><span style="font-size:18px;flex-shrink:0">📸</span><span>Une fois votre adresse confirmée, je vous demanderai des <strong>photos de votre véhicule</strong> afin d'estimer au mieux le temps de nettoyage nécessaire.</span></div><label class="mb-label">💬 Informations complémentaires (optionnel)</label><input type="text" id="mb-notes" class="m-field" placeholder="Ex : portail bleu, code 1234…"><div class="m-btns"><button class="sms-b" onclick="sendBooking('sms')">📱 SMS</button><button class="mail-b" onclick="sendBooking('mail')">✉️ Email</button></div><button class="close-b" onclick="closeModal()">Fermer</button></div>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const item=btn.closest('.faq-item'),open=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!open)item.classList.add('open');});});
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sc',scrollY>40));
+function toggleMenu(){const b=document.getElementById('burger'),m=document.getElementById('nav-mobile'),o=document.getElementById('overlay');b.classList.toggle('open');m.classList.toggle('open');o.classList.toggle('open');}
+const TARIFS={'Intérieur':{'Citadine':45,'Berline & Compacte':50,'SUV & Monospace':55,'Utilitaire & Van':null},'Extérieur':{'Citadine':40,'Berline & Compacte':45,'SUV & Monospace':50,'Utilitaire & Van':null},'Complet':{'Citadine':75,'Berline & Compacte':85,'SUV & Monospace':95,'Utilitaire & Van':null}};
+const VEH_EMOJI={'Citadine':'🚗','Berline & Compacte':'🚙','SUV & Monospace':'🚐','Utilitaire & Van':'🚚'};
+let bk={formule:'',vehicule:'',poilsOption:null,date:'',time:'',address:'',notes:''};let calYear,calMonth,calSelected=null;
+function hasInterior(f){return f==='Intérieur'||f==='Complet';}
+function getTotal(){const b=TARIFS[bk.formule]?.[bk.vehicule]??null;return b===null?null:b+(bk.poilsOption?bk.poilsOption.extra:0);}
+function getTotalTxt(){const t=getTotal();return t!==null?t+'€':'Sur devis';}
+function openBooking(preset){bk={formule:'',vehicule:'',poilsOption:null,date:'',time:'',address:'',notes:''};calSelected=null;document.getElementById('modal').style.display='flex';if(preset){bk.formule=preset;goStep(2);}else goStep(1);}
+function closeModal(){document.getElementById('modal').style.display='none';}
+function goStep(n){['screen-1','screen-2','screen-van','screen-25','screen-3','screen-4'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.display='none';});const sm={1:'screen-1',2:'screen-2','van':'screen-van',25:'screen-25',3:'screen-3',4:'screen-4'};const t=document.getElementById(sm[n]);if(t)t.style.display='block';const vo={1:1,2:2,25:3,3:4,4:5,'van':2};const cur=vo[n]||1;[1,2,25,3,4].forEach(i=>{const s=document.getElementById('prog-'+i);if(!s)return;const o=vo[i];s.classList.toggle('active',o===cur);s.classList.toggle('done',o<cur);});['mbl-1','mbl-2','mbl-25','mbl-3'].forEach((id,idx)=>{const el=document.getElementById(id);if(el)el.classList.toggle('done',cur>idx+2);});if(n===25){document.getElementById('poils-level').style.display='none';if(hasInterior(bk.formule)){document.getElementById('poils-section').style.display='block';document.getElementById('ext-section').style.display='none';document.getElementById('opt-title-badge').textContent='🐾';}else{document.getElementById('poils-section').style.display='none';document.getElementById('ext-section').style.display='block';document.getElementById('opt-title-badge').textContent='';}}if(n===3)buildStep3();if(n===4)buildStep4();}
+function pickFormule(f){bk.formule=f;goStep(2);}
+function pickVehicle(v){bk.vehicule=v;if(v==='Utilitaire & Van'){goStep('van');return;}goStep(25);}
+function contactVanSMS(){window.location.href=`sms:+330778043568?body=${encodeURIComponent(`Bonjour,\n\nJe souhaite obtenir un devis pour un lavage ${bk.formule} sur un Utilitaire / Van.\n\nMerci de me recontacter.\n\nCordialement`)}`;}
+function contactVanMail(){window.location.href=`mailto:mt.lavage.auto.54@gmail.com?subject=Devis Lavage Utilitaire / Van&body=${encodeURIComponent(`Bonjour,\n\nJe souhaite obtenir un devis pour un lavage ${bk.formule} sur un Utilitaire / Van.\n\nMerci de me recontacter.\n\nCordialement`)}`;}
+function pickPoils(w){if(!w){bk.poilsOption=null;goStep(3);}else showPoilsLevel();}
+function showPoilsLevel(){document.getElementById('poils-level').style.display='block';}
+function pickPoilsLevel(label,extra){bk.poilsOption={label,extra};goStep(3);}
+function pickSlot(btn,val){document.querySelectorAll('.slot-btn').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');document.getElementById('mb-time').value=val;bk.time=val;}
+function buildStep3(){const pi=bk.poilsOption?` + 🐾 ${bk.poilsOption.label}`:'';document.getElementById('recap-price').innerHTML=`<span>${bk.formule}${pi} · ${VEH_EMOJI[bk.vehicule]||''} ${bk.vehicule}</span><span class="recap-price-tag">${getTotalTxt()}</span>`;document.querySelectorAll('.slot-btn').forEach(b=>b.classList.remove('selected'));document.getElementById('mb-time').value='';bk.time='';setTimeout(()=>initCal(),10);}
+function buildStep4(){bk.date=calSelected||'';bk.time=document.getElementById('mb-time').value;if(!bk.date){alert('Veuillez choisir une date.');goStep(3);return;}if(!bk.time){alert('Veuillez choisir un créneau horaire.');goStep(3);return;}const pr=bk.poilsOption?`<div class="recap-row">🐾 <strong>Option poils :</strong> ${bk.poilsOption.label} (+${bk.poilsOption.extra}€)</div>`:'';document.getElementById('recap-full').innerHTML=`<div class="recap-row">✅ <strong>Formule :</strong> ${bk.formule}</div>${pr}<div class="recap-row">${VEH_EMOJI[bk.vehicule]||''} <strong>Véhicule :</strong> ${bk.vehicule}</div><div class="recap-row">📅 <strong>Date :</strong> ${fmtDate(bk.date)}</div><div class="recap-row">⏰ <strong>Créneau :</strong> ${bk.time}</div><div class="recap-row">💶 <strong>Prix estimé :</strong> <span style="color:var(--blue2);font-weight:700">${getTotalTxt()}</span></div>`;if(bk.address)document.getElementById('mb-address').value=bk.address;}
+function fmtDate(d){if(!d)return'';const[y,m,j]=d.split('-');return`${j}/${m}/${y}`;}
+function sendBooking(type){bk.address=document.getElementById('mb-address').value.trim();bk.notes=document.getElementById('mb-notes').value.trim();if(!bk.address){alert('Veuillez renseigner votre adresse.');return;}const pl=bk.poilsOption?`\n🐾 Option poils : ${bk.poilsOption.label} (+${bk.poilsOption.extra}€)`:'';const msg=`Bonjour,\n\nJe souhaite réserver une prestation MT Lavage Auto.\n\n🧽 Formule : ${bk.formule}${pl}\n${VEH_EMOJI[bk.vehicule]||''} Véhicule : ${bk.vehicule}\n📅 Date : ${fmtDate(bk.date)}\n⏰ Créneau : ${bk.time}\n📍 Adresse : ${bk.address}\n💶 Prix estimé : ${getTotalTxt()}${bk.notes?'\n💬 Notes : '+bk.notes:''}\n\nMerci de confirmer la disponibilité.\n\nCordialement`;if(type==='sms')window.location.href=`sms:+330778043568?body=${encodeURIComponent(msg)}`;else window.location.href=`mailto:mt.lavage.auto.54@gmail.com?subject=RDV Lavage - ${bk.formule} - ${bk.vehicule}&body=${encodeURIComponent(msg)}`;}
+document.getElementById('modal').addEventListener('click',e=>{if(e.target===e.currentTarget)closeModal();});
+function initCal(){if(!calYear){const now=new Date();calYear=now.getFullYear();calMonth=now.getMonth();}renderCal();}
+function calNav(dir){calMonth+=dir;if(calMonth>11){calMonth=0;calYear++;}if(calMonth<0){calMonth=11;calYear--;}renderCal();}
+function renderCal(){const MO=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];document.getElementById('cal-month-label').textContent=MO[calMonth]+' '+calYear;const grid=document.getElementById('cal-grid');grid.innerHTML='';const today=new Date();today.setHours(0,0,0,0);let sd=new Date(calYear,calMonth,1).getDay();sd=sd===0?6:sd-1;const dim=new Date(calYear,calMonth+1,0).getDate();const dip=new Date(calYear,calMonth,0).getDate();for(let i=sd-1;i>=0;i--){const d=document.createElement('button');d.className='cal-day cal-day-other';d.textContent=dip-i;grid.appendChild(d);}for(let day=1;day<=dim;day++){const date=new Date(calYear,calMonth,day);date.setHours(0,0,0,0);const d=document.createElement('button');d.className='cal-day';d.textContent=day;const ymd=calYear+'-'+String(calMonth+1).padStart(2,'0')+'-'+String(day).padStart(2,'0');if(date<today){d.classList.add('cal-day-disabled');d.disabled=true;}else if(date.getTime()===today.getTime())d.classList.add('cal-day-today');if(calSelected===ymd)d.classList.add('cal-day-selected');if(date>=today){d.addEventListener('click',()=>{calSelected=ymd;const[y,m,j]=ymd.split('-');const disp=document.getElementById('cal-selected-display');if(disp){disp.textContent='✅ '+j+'/'+m+'/'+y;disp.classList.add('cal-sel-filled');}bk.date=ymd;renderCal();});}grid.appendChild(d);}const total=sd+dim;const rem=total%7===0?0:7-(total%7);for(let i=1;i<=rem;i++){const d=document.createElement('button');d.className='cal-day cal-day-other';d.textContent=i;grid.appendChild(d);}}
+</script>
+
+</body>
+</html>
