@@ -171,6 +171,232 @@ footer strong{color:rgba(255,255,255,.8)}
 
 
 @media(max-width:600px){nav{padding:0 16px}.sec{padding:36px 16px}.page-hero{padding:100px 16px 48px}.modal-box{padding:20px 16px 18px;border-radius:20px}.mb-step-label{font-size:8px}.mb-step-num{width:26px;height:26px;font-size:11px}.mb-formula-grid{gap:8px}.mb-formula-btn{padding:14px 8px 12px}.mf-name{font-size:12px}.mf-price{font-size:10px}.mb-veh-grid{gap:8px}.mb-veh-btn{padding:14px 10px}.mv-emoji{font-size:26px}.mv-name{font-size:12px}.mv-ex{font-size:10px}.slot-btn{padding:14px 8px;border-radius:14px}.slot-icon{font-size:18px}.slot-time{font-size:15px}.slot-label{font-size:9px}}
+
+/* ── OPTIONS POILS redesign ── */
+.poil-choices{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:4px}
+.poil-card{position:relative;border-radius:18px;border:2px solid var(--line);background:var(--bg);padding:20px 14px 16px;cursor:pointer;font-family:'Sora',sans-serif;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;transition:.22s;overflow:hidden}
+.poil-card:hover{transform:translateY(-3px);box-shadow:var(--sh2)}
+.poil-card-no:hover,.poil-card-no.selected{border-color:var(--green);background:rgba(34,197,94,.05)}
+.poil-card-yes:hover,.poil-card-yes.selected{border-color:var(--orange);background:rgba(249,115,22,.05)}
+.pc-check{position:absolute;top:10px;right:10px;width:18px;height:18px;border-radius:50%;border:2px solid var(--line);transition:.2s}
+.pc-check-green.on{background:var(--green);border-color:var(--green)}
+.pc-check-orange.on{background:var(--orange);border-color:var(--orange)}
+.pc-emoji{font-size:32px;line-height:1;margin-bottom:4px}
+.pc-label{font-size:13px;font-weight:700;color:var(--ink)}
+.pc-sub2{font-size:11px;color:var(--muted);line-height:1.4}
+.pc-badge{font-size:11px;font-weight:800;padding:3px 10px;border-radius:20px;margin-top:4px}
+.pc-badge-green{background:rgba(34,197,94,.12);color:#16a34a}
+.pc-badge-orange{background:rgba(249,115,22,.12);color:var(--orange)}
+.poils-qty-sep{display:flex;align-items:center;gap:10px;margin:18px 0 12px;font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.poils-qty-sep::before,.poils-qty-sep::after{content:'';flex:1;height:1px;background:var(--line)}
+.poils-qty-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.poils-qty-btn{display:flex;flex-direction:column;align-items:center;gap:5px;padding:18px 10px 14px;border-radius:16px;border:2px solid rgba(249,115,22,.2);background:rgba(249,115,22,.04);cursor:pointer;font-family:'Sora',sans-serif;transition:.22s}
+.poils-qty-btn:hover{border-color:var(--orange);background:rgba(249,115,22,.09);transform:translateY(-3px);box-shadow:var(--sh2)}
+.pqb-dots{font-size:14px;letter-spacing:3px;line-height:1;margin-bottom:4px}
+.pqb-few{color:rgba(249,115,22,.5)}.pqb-many{color:var(--orange)}
+.pqb-name{font-size:13px;font-weight:700;color:var(--ink)}
+.pqb-desc{font-size:11px;color:var(--muted)}
+.pqb-price{font-size:16px;font-weight:800;color:var(--orange)}
+
+/* ── ÉCRAN CONFIRMER redesign ── */
+.recap-card{background:linear-gradient(135deg,#f0f5ff,#e8f0fe);border:1.5px solid rgba(37,99,235,.15);border-radius:18px;padding:16px 18px;margin-bottom:18px;display:flex;flex-direction:column;gap:8px}
+.recap-row{display:flex;align-items:center;gap:10px;font-size:13px}
+.recap-row strong{color:var(--ink);font-weight:700;min-width:80px;flex-shrink:0}
+.recap-row span.rv{color:var(--ink2);font-weight:500}
+.recap-total{margin-top:6px;padding-top:10px;border-top:1px solid rgba(37,99,235,.15);display:flex;justify-content:space-between;align-items:center}
+.recap-total-label{font-size:13px;color:var(--muted)}
+.recap-total-price{font-size:24px;font-weight:800;color:var(--blue2)}
+.addr-block{margin-bottom:16px}
+.addr-note{display:flex;align-items:flex-start;gap:8px;background:rgba(230,57,70,.05);border:1px solid rgba(230,57,70,.2);border-radius:10px;padding:10px 13px;font-size:12px;color:var(--muted);line-height:1.5;margin-top:-4px;margin-bottom:14px}
+.send-label{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px}
+.send-btns{display:flex;flex-direction:column;gap:10px;margin-bottom:10px}
+.send-btn{width:100%;padding:14px 18px;border:none;border-radius:14px;cursor:pointer;font-family:'Sora',sans-serif;display:flex;align-items:center;gap:14px;transition:.2s;text-align:left}
+.send-btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.send-sms{background:#25D366;color:white}.send-mail{background:var(--ink2);color:white}
+.sb-title{font-size:14px;font-weight:700}.sb-sub{font-size:11px;opacity:.7;margin-top:2px}
+
+/* ── CTA boutons sans images ── */
+.cta-btn-main svg,.cta-btn-sec svg,.cta-btn-main img,.cta-btn-sec img{flex-shrink:0}
+
+
+/* ── ADRESSE encadrée ── */
+.addr-block{
+  background:linear-gradient(135deg,#fff5f5,#fff0f0);
+  border:2px solid var(--red);
+  border-radius:16px;
+  padding:16px 16px 14px;
+  margin-bottom:16px;
+}
+.addr-block .mb-label{
+  color:var(--red)!important;
+  font-size:13px!important;
+  font-weight:800!important;
+  margin-bottom:10px;
+  display:flex;align-items:center;gap:6px;
+}
+.addr-block .m-field{
+  border:2px solid rgba(230,57,70,.35)!important;
+  background:white;
+  font-size:15px!important;
+  margin-bottom:10px;
+}
+.addr-block .m-field:focus{
+  border-color:var(--red)!important;
+  box-shadow:0 0 0 3px rgba(230,57,70,.12)!important;
+}
+.addr-note{
+  display:flex;align-items:flex-start;gap:8px;
+  background:rgba(230,57,70,.06);
+  border:1px solid rgba(230,57,70,.2);
+  border-radius:10px;
+  padding:9px 12px;
+  font-size:12px;color:var(--muted);line-height:1.5;
+}
+
+/* ── OPTIONS POILS ultra-simple ── */
+.poil-choices{display:flex;flex-direction:column;gap:12px;margin-bottom:4px}
+.poil-card{
+  width:100%;
+  border-radius:16px;
+  border:2px solid var(--line);
+  background:white;
+  padding:18px 20px;
+  cursor:pointer;
+  font-family:'Sora',sans-serif;
+  display:flex;align-items:center;gap:16px;
+  text-align:left;
+  transition:.2s;
+}
+.poil-card:hover{transform:translateY(-2px);box-shadow:var(--sh2)}
+.poil-card-no:hover,.poil-card-no.selected{border-color:var(--green);background:rgba(34,197,94,.05)}
+.poil-card-yes:hover,.poil-card-yes.selected{border-color:var(--orange);background:rgba(249,115,22,.05)}
+.pc-emoji{font-size:36px;line-height:1;flex-shrink:0}
+.pc-text{flex:1}
+.pc-label{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:2px}
+.pc-sub2{font-size:12px;color:var(--muted)}
+.pc-badge{font-size:12px;font-weight:800;padding:4px 12px;border-radius:20px;flex-shrink:0}
+.pc-badge-green{background:rgba(34,197,94,.12);color:#16a34a}
+.pc-badge-orange{background:rgba(249,115,22,.12);color:var(--orange)}
+.pc-check{display:none}
+
+/* sous-niveau quantité */
+.poils-qty-sep{display:flex;align-items:center;gap:10px;margin:16px 0 12px;font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.poils-qty-sep::before,.poils-qty-sep::after{content:'';flex:1;height:1px;background:var(--line)}
+.poils-qty-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.poils-qty-btn{
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  padding:20px 10px 16px;
+  border-radius:16px;border:2px solid rgba(249,115,22,.25);
+  background:rgba(249,115,22,.04);
+  cursor:pointer;font-family:'Sora',sans-serif;transition:.22s;
+}
+.poils-qty-btn:hover{border-color:var(--orange);background:rgba(249,115,22,.1);transform:translateY(-2px);box-shadow:var(--sh2)}
+.pqb-dots{font-size:18px;letter-spacing:4px;line-height:1;margin-bottom:4px}
+.pqb-few{color:rgba(249,115,22,.45)}.pqb-many{color:var(--orange)}
+.pqb-name{font-size:14px;font-weight:700;color:var(--ink)}
+.pqb-desc{font-size:11px;color:var(--muted);text-align:center}
+.pqb-price{font-size:20px;font-weight:800;color:var(--orange);margin-top:4px}
+
+
+/* ══════════════════════════════════════════
+   FLUIDITÉ GLOBALE — scroll animations + transitions
+   ══════════════════════════════════════════ */
+
+/* Scroll reveal */
+.reveal{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity .6s cubic-bezier(.22,.68,0,1.2), transform .6s cubic-bezier(.22,.68,0,1.2);
+}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-28px);transition:opacity .6s cubic-bezier(.22,.68,0,1.2),transform .6s cubic-bezier(.22,.68,0,1.2)}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(28px);transition:opacity .6s cubic-bezier(.22,.68,0,1.2),transform .6s cubic-bezier(.22,.68,0,1.2)}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+.reveal-d1{transition-delay:.08s}
+.reveal-d2{transition-delay:.16s}
+.reveal-d3{transition-delay:.24s}
+.reveal-d4{transition-delay:.32s}
+.reveal-d5{transition-delay:.40s}
+.reveal-d6{transition-delay:.48s}
+
+/* Transitions globales plus douces */
+a,button{transition:all .22s cubic-bezier(.22,.68,0,1.2)!important}
+
+/* Nav — apparition smooth */
+nav{transition:box-shadow .4s ease, background .4s ease!important}
+
+/* Cards — hover plus fluide */
+.card,.ben-card,.step-card,.ba-card,.faq-item,.option-card,.avis-card{
+  transition:transform .3s cubic-bezier(.22,.68,0,1.2), box-shadow .3s ease!important;
+  will-change:transform;
+}
+
+/* Boutons — press effect */
+.btn-hero-main:active,.btn-hero-sec:active,
+.cta-btn-main:active,.cta-btn-sec:active,
+.nav-rdv:active,.mb-next-btn:active,
+.send-btn:active,.btn-rdv:active{
+  transform:scale(.97)!important;
+  transition:transform .1s ease!important;
+}
+
+/* Modal — entrée plus souple */
+.modal-box{
+  animation:modalIn .4s cubic-bezier(.22,.68,0,1.2) both!important;
+}
+@keyframes modalIn{
+  from{opacity:0;transform:translateY(32px) scale(.97)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+
+/* Slot buttons — hover ripple */
+.slot-btn,.mb-veh-btn,.mb-formula-btn,.poil-card,.poils-qty-btn{
+  transition:transform .25s cubic-bezier(.22,.68,0,1.2), box-shadow .25s ease, border-color .2s ease, background .2s ease!important;
+}
+
+/* Scroll fluide renforcé */
+html{scroll-behavior:smooth}
+*{-webkit-tap-highlight-color:transparent}
+
+/* Trust band chiffres — count-up visuel via opacity */
+.t-num,.stat-num{
+  transition:opacity .4s ease;
+}
+
+/* Step cards — décalage en cascade */
+.step-card:nth-child(1){transition-delay:.05s}
+.step-card:nth-child(2){transition-delay:.12s}
+.step-card:nth-child(3){transition-delay:.19s}
+.step-card:nth-child(4){transition-delay:.26s}
+
+/* Ben cards — décalage en cascade */
+.ben-card:nth-child(1){transition-delay:.04s}
+.ben-card:nth-child(2){transition-delay:.10s}
+.ben-card:nth-child(3){transition-delay:.16s}
+.ben-card:nth-child(4){transition-delay:.22s}
+.ben-card:nth-child(5){transition-delay:.28s}
+.ben-card:nth-child(6){transition-delay:.34s}
+
+/* Liens nav — underline animé */
+.nav-links a{position:relative;overflow:hidden}
+.nav-links a::after{
+  content:'';
+  position:absolute;
+  bottom:4px;left:14px;right:14px;
+  height:2px;
+  background:var(--blue2);
+  border-radius:2px;
+  transform:scaleX(0);
+  transform-origin:center;
+  transition:transform .25s cubic-bezier(.22,.68,0,1.2);
+}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.nav-links a.active::after{opacity:.5}
+
+/* Smooth image loading */
+img{transition:opacity .3s ease}
+
 </style>
 </head>
 <body>
@@ -216,13 +442,13 @@ footer strong{color:rgba(255,255,255,.8)}
 
 <div class="sec" style="background:#f0f4fb">
   <div class="sec-c">
-    <div class="sec-hd">
+    <div class="sec-hd reveal">
       <div class="label-tag"><span class="label-dot"></span>Résultats réels</div>
       <h2 class="sh">Glissez pour voir<br><span>la transformation</span></h2>
       <p class="sh-sub">Toutes ces photos sont prises sur de vraies prestations</p>
     </div>
     <div class="ba-grid">
-      <div class="ba-card">
+      <div class="ba-card reveal">
         <div class="ba-head"><img src="https://i.imgur.com/vLcJWDh.png" alt="">Intérieur</div>
         <div class="before-after">
           <img src="https://i.imgur.com/Yuutfbz.jpeg" class="img-right" alt="après">
@@ -230,7 +456,7 @@ footer strong{color:rgba(255,255,255,.8)}
           <div class="slider-line"></div><div class="slider-btn">◀▶</div>
         </div>
       </div>
-      <div class="ba-card">
+      <div class="ba-card reveal">
         <div class="ba-head"><img src="https://i.imgur.com/jEgsTM9.png" alt="">Extérieur</div>
         <div class="before-after">
           <img src="https://i.imgur.com/jHf3qH2.jpeg" class="img-right" alt="après">
@@ -245,7 +471,7 @@ footer strong{color:rgba(255,255,255,.8)}
 
 <div class="sec" style="background:var(--white)">
   <div class="sec-c">
-    <div class="sec-hd">
+    <div class="sec-hd reveal">
       <div class="label-tag"><span class="label-dot"></span>Avis clients</div>
       <h2 class="sh">Ils me font <span>confiance</span></h2>
       <p class="sh-sub">Retrouvez tous les avis sur ma fiche Google Business</p>
@@ -264,7 +490,7 @@ footer strong{color:rgba(255,255,255,.8)}
   <h2>Prêt pour une voiture<br>comme neuve ?</h2>
   <p>Réservez en 30 secondes — votre message est pré-rempli automatiquement.</p>
   <div class="cta-btns">
-    <button class="cta-btn-main" onclick="openBooking(null)"><img src="https://i.imgur.com/CaOo0Al.png" alt="">Prendre rendez-vous</button>
+    <button class="cta-btn-main" onclick="openBooking(null)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Prendre rendez-vous</button>
     <a href="tel:+330778043568" class="cta-btn-sec">📞 Appeler</a>
   </div>
 </div>
@@ -290,9 +516,90 @@ footer strong{color:rgba(255,255,255,.8)}
     <div id="screen-1"><div class="mb-title">Quelle formule ?</div><div class="mb-formula-grid"><button class="mb-formula-btn mf-red" onclick="pickFormule('Intérieur')"><div class="mf-ico-wrap mf-ico-red"><img src="https://i.imgur.com/vLcJWDh.png" style="height:26px"></div><span class="mf-name">Intérieur</span><span class="mf-price">dès 45€</span></button><button class="mb-formula-btn mf-orange" onclick="pickFormule('Complet')" style="position:relative"><span class="mb-pop">🔥</span><div class="mf-ico-wrap mf-ico-orange"><img src="https://i.imgur.com/0yZv1u9.png" style="height:26px"></div><span class="mf-name">Complet</span><span class="mf-price">dès 75€</span></button><button class="mb-formula-btn mf-blue" onclick="pickFormule('Extérieur')"><div class="mf-ico-wrap mf-ico-blue"><img src="https://i.imgur.com/jEgsTM9.png" style="height:26px"></div><span class="mf-name">Extérieur</span><span class="mf-price">dès 40€</span></button></div><button class="mb-close-top" onclick="closeModal()">✕ Fermer</button></div>
     <div id="screen-2" style="display:none"><button class="mb-back" onclick="goStep(1)">← Retour</button><div class="mb-title">Quel est votre véhicule ?</div><div class="mb-veh-grid"><button class="mb-veh-btn" onclick="pickVehicle('Citadine')"><span class="mv-emoji">🚗</span><span class="mv-name">Citadine</span><span class="mv-ex">Clio, Polo, 208…</span></button><button class="mb-veh-btn" onclick="pickVehicle('Berline & Compacte')"><span class="mv-emoji">🚙</span><span class="mv-name">Berline &amp; Compacte</span><span class="mv-ex">Golf, 308, Classe A…</span></button><button class="mb-veh-btn" onclick="pickVehicle('SUV & Monospace')"><span class="mv-emoji">🚐</span><span class="mv-name">SUV &amp; Monospace</span><span class="mv-ex">Kadjar, 3008, Q3…</span></button><button class="mb-veh-btn" onclick="pickVehicle('Utilitaire & Van')" style="border-color:rgba(249,115,22,.3);background:linear-gradient(145deg,#fff8f1,#fff0e0)"><span class="mv-emoji">🚚</span><span class="mv-name" style="color:#c2440a">Utilitaire &amp; Van</span><span class="mv-ex" style="color:var(--orange);font-weight:600">Contactez-moi</span></button></div></div>
     <div id="screen-van" style="display:none"><button class="mb-back" onclick="goStep(2)">← Retour</button><div class="van-contact-box"><div class="van-contact-icon">🚚</div><div class="van-contact-title">Utilitaire &amp; Van</div><div class="van-contact-sub">Les tarifs pour ce type de véhicule sont établis sur devis. Contactez-moi directement par SMS ou par email.</div><div class="van-btns"><button class="van-btn-sms" onclick="contactVanSMS()">📱 SMS</button><button class="van-btn-mail" onclick="contactVanMail()">✉️ Email</button></div><button class="close-b" onclick="closeModal()">Fermer</button></div></div>
-    <div id="screen-25" style="display:none"><button class="mb-back" onclick="goStep(2)">← Retour</button><div class="mb-title">Options <span id="opt-title-badge"></span></div><div id="poils-section"><p style="font-size:13px;color:var(--muted);margin-bottom:20px">Votre animal laisse des poils dans l'habitacle ?</p><button class="poil-choice poil-no" onclick="pickPoils(false)"><div class="pc-left"><div class="pc-icon-wrap pc-icon-green">🚗</div><div><div class="pc-title">Sans option poils</div><div class="pc-sub">Lavage standard — déjà inclus</div></div></div><span class="pc-tag pc-tag-green">Inclus</span></button><div class="poils-or">— ou —</div><button class="poil-choice poil-yes" onclick="showPoilsLevel()"><div class="pc-left"><div class="pc-icon-wrap pc-icon-orange">🐾</div><div><div class="pc-title">Avec option poils</div><div class="pc-sub">Traitement anti-poils en profondeur</div></div></div><span class="pc-tag pc-tag-orange">+20€ / +35€</span></button><div id="poils-level" style="display:none"><div class="poils-qty-title">Quelle quantité de poils ?</div><div class="poils-qty-grid"><button class="poils-qty-btn" onclick="pickPoilsLevel('Peu de poils',20)"><div class="pqb-icon pqb-icon-few">◎</div><span class="pqb-name">Peu de poils</span><span class="pqb-price">+20€</span></button><button class="poils-qty-btn" onclick="pickPoilsLevel('Beaucoup de poils',35)"><div class="pqb-icon pqb-icon-many">●●●</div><span class="pqb-name">Beaucoup de poils</span><span class="pqb-price">+35€</span></button></div></div></div><div id="ext-section" style="display:none"><p style="font-size:13px;color:var(--muted);margin-bottom:20px">Aucune option supplémentaire pour le lavage extérieur.</p><button class="mb-next-btn" onclick="bk.poilsOption=null;goStep(3)">Continuer →</button></div></div>
+    <div id="screen-25" style="display:none">
+      <button class="mb-back" onclick="goStep(2)">← Retour</button>
+      <div class="mb-title">Option poils 🐾</div>
+
+      <div id="poils-section">
+        <p style="font-size:14px;color:var(--muted);margin-bottom:18px;line-height:1.6">Y a-t-il des <strong style="color:var(--ink)">poils d'animaux</strong> dans votre véhicule ?</p>
+        <div class="poil-choices">
+          <button class="poil-card poil-card-no" onclick="pickPoils(false)">
+            <div class="pc-emoji">🙅</div>
+            <div class="pc-text">
+              <div class="pc-label">Sans option poils</div>
+              <div class="pc-sub2">Lavage standard inclus</div>
+            </div>
+            <div class="pc-badge pc-badge-green">Gratuit</div>
+          </button>
+          <button class="poil-card poil-card-yes" onclick="showPoilsLevel()">
+            <div class="pc-emoji">🐶</div>
+            <div class="pc-text">
+              <div class="pc-label">Avec option poils</div>
+              
+            </div>
+            <div class="pc-badge pc-badge-orange">+20 ou 35€</div>
+          </button>
+        </div>
+        <div id="poils-level" style="display:none">
+          <div class="poils-qty-sep"><span>Combien y a-t-il de poils ?</span></div>
+          <div class="poils-qty-grid">
+            <button class="poils-qty-btn" onclick="pickPoilsLevel('Peu de poils',20)">
+              <div class="pqb-dots pqb-few">● ●</div>
+              <span class="pqb-name">Peu de poils</span>
+              <span class="pqb-desc">Quelques zones</span>
+              <span class="pqb-price">+20€</span>
+            </button>
+            <button class="poils-qty-btn" onclick="pickPoilsLevel('Beaucoup de poils',35)">
+              <div class="pqb-dots pqb-many">●●●●●</div>
+              <span class="pqb-name">Beaucoup</span>
+              <span class="pqb-desc">Partout dedans</span>
+              <span class="pqb-price">+35€</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="ext-section" style="display:none">
+        <div style="text-align:center;padding:24px 16px;background:var(--bg);border-radius:var(--r2);border:1.5px solid var(--line)">
+          <div style="font-size:36px;margin-bottom:10px">✨</div>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6">Aucune option supplémentaire pour le lavage extérieur.<br>Votre prestation est prête !</p>
+        </div>
+        <button class="mb-next-btn" style="margin-top:16px" onclick="bk.poilsOption=null;goStep(3)">Continuer →</button>
+      </div>
+    </div>
     <div id="screen-3" style="display:none"><button class="mb-back" onclick="goStep(25)">← Retour</button><div class="mb-title">Choisissez votre créneau</div><div class="mb-recap" id="recap-price"></div><label class="mb-label">📅 Date souhaitée</label><div class="cal-inline" id="cal-inline"><div class="cal-header"><button class="cal-nav" onclick="calNav(-1)" type="button">‹</button><span class="cal-month-label" id="cal-month-label"></span><button class="cal-nav" onclick="calNav(1)" type="button">›</button></div><div class="cal-weekdays"><span>Lu</span><span>Ma</span><span>Me</span><span>Je</span><span>Ve</span><span>Sa</span><span>Di</span></div><div class="cal-grid" id="cal-grid"></div><div class="cal-selected-display" id="cal-selected-display">Aucune date sélectionnée</div></div><label class="mb-label">⏰ Créneau horaire</label><div class="slot-grid"><button class="slot-btn" onclick="pickSlot(this,'8h30')"><span class="slot-icon">🌅</span><span class="slot-time">8h30</span><span class="slot-label">Matin</span></button><button class="slot-btn" onclick="pickSlot(this,'12h30')"><span class="slot-icon">☀️</span><span class="slot-time">12h30</span><span class="slot-label">Après-midi</span></button><button class="slot-btn" onclick="pickSlot(this,'16h30')"><span class="slot-icon">🌆</span><span class="slot-time">16h30</span><span class="slot-label">Fin de journée</span></button></div><input type="hidden" id="mb-time" value=""><div style="display:flex;align-items:flex-start;gap:10px;background:rgba(249,115,22,.07);border:1px solid rgba(249,115,22,.25);border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:12px;color:var(--ink);line-height:1.6"><span style="font-size:18px;flex-shrink:0">⚡</span><span>Pensez à vérifier qu'une <strong>prise électrique accessible</strong> est disponible à l'adresse d'intervention.</span></div><button class="mb-next-btn" onclick="goStep(4)">Suivant →</button></div>
-    <div id="screen-4" style="display:none"><button class="mb-back" onclick="goStep(3)">← Retour</button><div class="mb-title">Votre adresse</div><div class="mb-recap-full" id="recap-full"></div><label class="mb-label" style="color:var(--red)">📍 Adresse complète d'intervention</label><input type="text" id="mb-address" class="m-field" placeholder="Ex : 12 rue des Fleurs, Lunéville"><div style="display:flex;align-items:flex-start;gap:9px;background:rgba(230,57,70,.06);border:1px solid rgba(230,57,70,.3);border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:13px;color:var(--ink2);line-height:1.6"><span style="font-size:18px;flex-shrink:0">📸</span><span>Une fois votre adresse confirmée, je vous demanderai des <strong>photos de votre véhicule</strong> afin d'estimer au mieux le temps de nettoyage nécessaire.</span></div><label class="mb-label">💬 Informations complémentaires (optionnel)</label><input type="text" id="mb-notes" class="m-field" placeholder="Ex : portail bleu, code 1234…"><div class="m-btns"><button class="sms-b" onclick="sendBooking('sms')">📱 SMS</button><button class="mail-b" onclick="sendBooking('mail')">✉️ Email</button></div><button class="close-b" onclick="closeModal()">Fermer</button></div>
+    <div id="screen-4" style="display:none">
+      <button class="mb-back" onclick="goStep(3)">← Retour</button>
+      <div class="mb-title">✅ Récap &amp; confirmation</div>
+      <div class="recap-card" id="recap-full"></div>
+      <div class="addr-block">
+        <label class="mb-label">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Adresse d'intervention <span style="color:var(--red)">*</span>
+        </label>
+        <input type="text" id="mb-address" class="m-field" placeholder="Ex : 12 rue des Fleurs, Lunéville 54300">
+      </div>
+      <div class="addr-note">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:1px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <span>Une fois votre adresse confirmée, je vous demanderai des <strong>photos de votre véhicule</strong> (intérieur, extérieur, tapis…) afin d'estimer au mieux le temps de nettoyage nécessaire.</span>
+      </div>
+      <div style="margin-bottom:16px">
+        <label class="mb-label" style="margin-bottom:8px;display:block">💬 Infos complémentaires <span style="font-weight:400;color:var(--muted)">(optionnel)</span></label>
+        <input type="text" id="mb-notes" class="m-field" placeholder="Ex : portail bleu, code 1234…">
+      </div>
+      <div class="send-label">Envoyer votre demande de réservation :</div>
+      <div class="send-btns">
+        <button class="send-btn send-sms" onclick="sendBooking('sms')">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          <div><div class="sb-title">Envoyer par SMS</div><div class="sb-sub">Ouvrira votre appli SMS</div></div>
+        </button>
+        <button class="send-btn send-mail" onclick="sendBooking('mail')">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+          <div><div class="sb-title">Envoyer par Email</div><div class="sb-sub">Ouvrira votre messagerie</div></div>
+        </button>
+      </div>
+      <button class="close-b" onclick="closeModal()">Annuler</button>
+    </div>
   </div>
 </div>
 
@@ -311,7 +618,7 @@ function getTotal(){const b=TARIFS[bk.formule]?.[bk.vehicule]??null;return b===n
 function getTotalTxt(){const t=getTotal();return t!==null?t+'€':'Sur devis';}
 function openBooking(preset){bk={formule:'',vehicule:'',poilsOption:null,date:'',time:'',address:'',notes:''};calSelected=null;document.getElementById('modal').style.display='flex';if(preset){bk.formule=preset;goStep(2);}else goStep(1);}
 function closeModal(){document.getElementById('modal').style.display='none';}
-function goStep(n){['screen-1','screen-2','screen-van','screen-25','screen-3','screen-4'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.display='none';});const sm={1:'screen-1',2:'screen-2','van':'screen-van',25:'screen-25',3:'screen-3',4:'screen-4'};const t=document.getElementById(sm[n]);if(t)t.style.display='block';const vo={1:1,2:2,25:3,3:4,4:5,'van':2};const cur=vo[n]||1;[1,2,25,3,4].forEach(i=>{const s=document.getElementById('prog-'+i);if(!s)return;const o=vo[i];s.classList.toggle('active',o===cur);s.classList.toggle('done',o<cur);});['mbl-1','mbl-2','mbl-25','mbl-3'].forEach((id,idx)=>{const el=document.getElementById(id);if(el)el.classList.toggle('done',cur>idx+2);});if(n===25){document.getElementById('poils-level').style.display='none';if(hasInterior(bk.formule)){document.getElementById('poils-section').style.display='block';document.getElementById('ext-section').style.display='none';document.getElementById('opt-title-badge').textContent='🐾';}else{document.getElementById('poils-section').style.display='none';document.getElementById('ext-section').style.display='block';document.getElementById('opt-title-badge').textContent='';}}if(n===3)buildStep3();if(n===4)buildStep4();}
+function goStep(n){['screen-1','screen-2','screen-van','screen-25','screen-3','screen-4'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.display='none';});const sm={1:'screen-1',2:'screen-2','van':'screen-van',25:'screen-25',3:'screen-3',4:'screen-4'};const t=document.getElementById(sm[n]);if(t)t.style.display='block';const vo={1:1,2:2,25:3,3:4,4:5,'van':2};const cur=vo[n]||1;[1,2,25,3,4].forEach(i=>{const s=document.getElementById('prog-'+i);if(!s)return;const o=vo[i];s.classList.toggle('active',o===cur);s.classList.toggle('done',o<cur);});['mbl-1','mbl-2','mbl-25','mbl-3'].forEach((id,idx)=>{const el=document.getElementById(id);if(el)el.classList.toggle('done',cur>idx+2);});if(n===25){document.getElementById('poils-level').style.display='none';if(hasInterior(bk.formule)){document.getElementById('poils-section').style.display='block';document.getElementById('ext-section').style.display='none';}else{document.getElementById('poils-section').style.display='none';document.getElementById('ext-section').style.display='block';}}if(n===3)buildStep3();if(n===4)buildStep4();}
 function pickFormule(f){bk.formule=f;goStep(2);}
 function pickVehicle(v){bk.vehicule=v;if(v==='Utilitaire & Van'){goStep('van');return;}goStep(25);}
 function contactVanSMS(){window.location.href=`sms:+330778043568?body=${encodeURIComponent(`Bonjour,\n\nJe souhaite obtenir un devis pour un lavage ${bk.formule} sur un Utilitaire / Van.\n\nMerci de me recontacter.\n\nCordialement`)}`;}
@@ -321,13 +628,40 @@ function showPoilsLevel(){document.getElementById('poils-level').style.display='
 function pickPoilsLevel(label,extra){bk.poilsOption={label,extra};goStep(3);}
 function pickSlot(btn,val){document.querySelectorAll('.slot-btn').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');document.getElementById('mb-time').value=val;bk.time=val;}
 function buildStep3(){const pi=bk.poilsOption?` + 🐾 ${bk.poilsOption.label}`:'';document.getElementById('recap-price').innerHTML=`<span>${bk.formule}${pi} · ${VEH_EMOJI[bk.vehicule]||''} ${bk.vehicule}</span><span class="recap-price-tag">${getTotalTxt()}</span>`;document.querySelectorAll('.slot-btn').forEach(b=>b.classList.remove('selected'));document.getElementById('mb-time').value='';bk.time='';setTimeout(()=>initCal(),10);}
-function buildStep4(){bk.date=calSelected||'';bk.time=document.getElementById('mb-time').value;if(!bk.date){alert('Veuillez choisir une date.');goStep(3);return;}if(!bk.time){alert('Veuillez choisir un créneau horaire.');goStep(3);return;}const pr=bk.poilsOption?`<div class="recap-row">🐾 <strong>Option poils :</strong> ${bk.poilsOption.label} (+${bk.poilsOption.extra}€)</div>`:'';document.getElementById('recap-full').innerHTML=`<div class="recap-row">✅ <strong>Formule :</strong> ${bk.formule}</div>${pr}<div class="recap-row">${VEH_EMOJI[bk.vehicule]||''} <strong>Véhicule :</strong> ${bk.vehicule}</div><div class="recap-row">📅 <strong>Date :</strong> ${fmtDate(bk.date)}</div><div class="recap-row">⏰ <strong>Créneau :</strong> ${bk.time}</div><div class="recap-row">💶 <strong>Prix estimé :</strong> <span style="color:var(--blue2);font-weight:700">${getTotalTxt()}</span></div>`;if(bk.address)document.getElementById('mb-address').value=bk.address;}
+function buildStep4(){bk.date=calSelected||'';bk.time=document.getElementById('mb-time').value;if(!bk.date){alert('Veuillez choisir une date.');goStep(3);return;}if(!bk.time){alert('Veuillez choisir un créneau horaire.');goStep(3);return;}
+  const pr=bk.poilsOption?'<div class="recap-row"><strong>🐾 Option</strong><span class="rv">'+bk.poilsOption.label+' (+'+bk.poilsOption.extra+'€)</span></div>':'';
+  const total=getTotalTxt();
+  document.getElementById('recap-full').innerHTML=
+    '<div class="recap-row"><strong>🧽 Formule</strong><span class="rv">'+bk.formule+'</span></div>'+
+    '<div class="recap-row"><strong>'+(VEH_EMOJI[bk.vehicule]||'🚗')+' Véhicule</strong><span class="rv">'+bk.vehicule+'</span></div>'+
+    pr+
+    '<div class="recap-row"><strong>📅 Date</strong><span class="rv">'+fmtDate(bk.date)+'</span></div>'+
+    '<div class="recap-row"><strong>⏰ Créneau</strong><span class="rv">'+bk.time+'</span></div>'+
+    '<div class="recap-total"><span class="recap-total-label">Prix estimé</span><span class="recap-total-price">'+total+'</span></div>';
+  if(bk.address)document.getElementById('mb-address').value=bk.address;
+}
 function fmtDate(d){if(!d)return'';const[y,m,j]=d.split('-');return`${j}/${m}/${y}`;}
 function sendBooking(type){bk.address=document.getElementById('mb-address').value.trim();bk.notes=document.getElementById('mb-notes').value.trim();if(!bk.address){alert('Veuillez renseigner votre adresse.');return;}const pl=bk.poilsOption?`\n🐾 Option poils : ${bk.poilsOption.label} (+${bk.poilsOption.extra}€)`:'';const msg=`Bonjour,\n\nJe souhaite réserver une prestation MT Lavage Auto.\n\n🧽 Formule : ${bk.formule}${pl}\n${VEH_EMOJI[bk.vehicule]||''} Véhicule : ${bk.vehicule}\n📅 Date : ${fmtDate(bk.date)}\n⏰ Créneau : ${bk.time}\n📍 Adresse : ${bk.address}\n💶 Prix estimé : ${getTotalTxt()}${bk.notes?'\n💬 Notes : '+bk.notes:''}\n\nMerci de confirmer la disponibilité.\n\nCordialement`;if(type==='sms')window.location.href=`sms:+330778043568?body=${encodeURIComponent(msg)}`;else window.location.href=`mailto:mt.lavage.auto.54@gmail.com?subject=RDV Lavage - ${bk.formule} - ${bk.vehicule}&body=${encodeURIComponent(msg)}`;}
 document.getElementById('modal').addEventListener('click',e=>{if(e.target===e.currentTarget)closeModal();});
 function initCal(){if(!calYear){const now=new Date();calYear=now.getFullYear();calMonth=now.getMonth();}renderCal();}
 function calNav(dir){calMonth+=dir;if(calMonth>11){calMonth=0;calYear++;}if(calMonth<0){calMonth=11;calYear--;}renderCal();}
 function renderCal(){const MO=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];document.getElementById('cal-month-label').textContent=MO[calMonth]+' '+calYear;const grid=document.getElementById('cal-grid');grid.innerHTML='';const today=new Date();today.setHours(0,0,0,0);let sd=new Date(calYear,calMonth,1).getDay();sd=sd===0?6:sd-1;const dim=new Date(calYear,calMonth+1,0).getDate();const dip=new Date(calYear,calMonth,0).getDate();for(let i=sd-1;i>=0;i--){const d=document.createElement('button');d.className='cal-day cal-day-other';d.textContent=dip-i;grid.appendChild(d);}for(let day=1;day<=dim;day++){const date=new Date(calYear,calMonth,day);date.setHours(0,0,0,0);const d=document.createElement('button');d.className='cal-day';d.textContent=day;const ymd=calYear+'-'+String(calMonth+1).padStart(2,'0')+'-'+String(day).padStart(2,'0');if(date<today){d.classList.add('cal-day-disabled');d.disabled=true;}else if(date.getTime()===today.getTime())d.classList.add('cal-day-today');if(calSelected===ymd)d.classList.add('cal-day-selected');if(date>=today){d.addEventListener('click',()=>{calSelected=ymd;const[y,m,j]=ymd.split('-');const disp=document.getElementById('cal-selected-display');if(disp){disp.textContent='✅ '+j+'/'+m+'/'+y;disp.classList.add('cal-sel-filled');}bk.date=ymd;renderCal();});}grid.appendChild(d);}const total=sd+dim;const rem=total%7===0?0:7-(total%7);for(let i=1;i<=rem;i++){const d=document.createElement('button');d.className='cal-day cal-day-other';d.textContent=i;grid.appendChild(d);}}
+
+// ── SCROLL REVEAL ────────────────────────────────────────────────────────────
+(function(){
+  var els = document.querySelectorAll('.reveal,.reveal-left,.reveal-right');
+  if(!els.length) return;
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){io.observe(el);});
+})();
+
 </script>
 </body>
 </html>
