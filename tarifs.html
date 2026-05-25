@@ -469,7 +469,7 @@ img{transition:opacity .3s ease}
 .swipe-hint{display:none}
 @media(max-width:760px){
   .swipe-hint{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);font-weight:600;padding:0 16px;max-height:40px;opacity:1;overflow:hidden;transition:opacity .35s ease,max-height .35s ease,margin-bottom .35s ease;margin-bottom:8px}
-  .swipe-hint::after{content:'👆 Glissez pour voir la suite';display:block}
+  .swipe-hint::after{content:'Glissez pour voir la suite ➞';display:block}
 }
 </style>
 </head>
@@ -555,7 +555,6 @@ img{transition:opacity .3s ease}
         </div>
 
         <div class="card card-orange tcard">
-          <div class="card-ribbon">Le plus choisi</div>
           <div class="card-ico ico-w"><img src="https://i.imgur.com/0yZv1u9.png" alt=""></div>
           <div class="card-body-wrap">
             <h3>Complet Premium</h3>
@@ -642,7 +641,6 @@ img{transition:opacity .3s ease}
         </div>
 
         <div class="card card-orange tcard">
-          <div class="card-ribbon">🔥 Populaire</div>
           <div class="card-ico ico-w"><img src="https://i.imgur.com/0yZv1u9.png" alt=""></div>
           <div class="card-body-wrap">
             <h3>Complet Basique</h3>
@@ -752,18 +750,20 @@ img{transition:opacity .3s ease}
   <div class="sec-c" style="max-width:680px">
     <div class="sec-hd">
       <div class="label-tag"><span class="label-dot"></span>Option supplémentaire</div>
+	  <p><img src="https://i.imgur.com/ytrVR1c.png" style="width:100px; height:auto;"></p>
       <h2 class="sh">Vous avez un <span>animal ?</span></h2>
       <p class="sh-sub">Ajoutez l'option anti-poils à votre formule Intérieur ou Complet</p>
+	  
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
       <div style="background:var(--bg);border-radius:var(--r2);padding:22px 20px;border:1.5px solid var(--line);text-align:center">
-        <div style="font-size:36px;margin-bottom:10px">🐾</div>
+        <div style="font-size:36px;margin-bottom:10px"></div>
         <div style="font-size:16px;font-weight:800;color:var(--ink);margin-bottom:6px">Peu de poils</div>
         <div style="font-size:28px;font-weight:900;color:var(--orange);margin-bottom:8px">+15€</div>
         <div style="font-size:12px;color:var(--muted);line-height:1.5">Présence légère — aspiration renforcée des sièges et moquettes</div>
       </div>
       <div style="background:linear-gradient(145deg,#fff7ed,#ffedd5);border-radius:var(--r2);padding:22px 20px;border:1.5px solid rgba(249,115,22,.3);text-align:center">
-        <div style="font-size:36px;margin-bottom:10px">🐕</div>
+        <div style="font-size:36px;margin-bottom:10px"></div>
         <div style="font-size:16px;font-weight:800;color:var(--ink);margin-bottom:6px">Beaucoup de poils</div>
         <div style="font-size:28px;font-weight:900;color:var(--orange);margin-bottom:8px">+25€</div>
         <div style="font-size:12px;color:var(--muted);line-height:1.5">Présence importante — traitement intensif et brossage approfondi</div>
@@ -774,55 +774,6 @@ img{transition:opacity .3s ease}
     </div>
   </div>
 </div>
-
-<!-- ZONE -->
-<div class="sec" style="background:var(--white)">
-  <div class="sec-c" style="max-width:860px">
-    <div class="sec-hd">
-      <div class="label-tag"><span class="label-dot"></span>Zone d'intervention</div>
-      <h2 class="sh">Je viens dans un rayon de <span>25 km</span></h2>
-      <p class="sh-sub">Autour de Lunéville, 7j/7 — déplacement gratuit</p>
-    </div>
-    <div class="zone-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start">
-      <div style="display:flex;flex-direction:column;gap:14px">
-        <div style="background:var(--bg);border-radius:var(--r2);padding:22px 24px;box-shadow:var(--sh)">
-          <div style="font-size:12px;font-weight:700;color:var(--blue2);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">Villes couvertes</div>
-          <div style="display:flex;flex-wrap:wrap;gap:8px">
-            <span style="background:white;border:1px solid var(--line);border-radius:50px;padding:5px 14px;font-size:13px;font-weight:600;color:var(--ink)">📍 Lunéville</span>
-            <span style="background:white;border:1px solid var(--line);border-radius:50px;padding:5px 14px;font-size:13px;color:var(--muted)">Dombasle-sur-Meurthe</span>
-            <span style="background:white;border:1px solid var(--line);border-radius:50px;padding:5px 14px;font-size:13px;color:var(--muted)">Baccarat</span>
-            <span style="background:white;border:1px solid var(--line);border-radius:50px;padding:5px 14px;font-size:13px;color:var(--muted)">Saint-Nicolas-de-Port</span>
-            <span style="background:white;border:1px solid var(--line);border-radius:50px;padding:5px 14px;font-size:13px;color:var(--muted)">Bayon</span>
-            <span style="background:white;border:1px solid var(--line);border-radius:50px;padding:5px 14px;font-size:13px;color:var(--muted)">Blâmont</span>
-            <span style="background:white;border:1px solid var(--line);border-radius:50px;padding:5px 14px;font-size:13px;color:var(--muted)">et alentours…</span>
-          </div>
-        </div>
-        <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1.5px solid rgba(34,197,94,.25);border-radius:var(--r2);padding:22px 24px">
-          <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
-            <div style="width:40px;height:40px;background:rgba(34,197,94,.15);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">✅</div>
-            <div>
-              <div style="font-size:15px;font-weight:700;color:#15803d">Déplacement gratuit</div>
-              <div style="font-size:13px;color:#16a34a">Jusqu'à 25 km autour de Lunéville</div>
-            </div>
-          </div>
-        </div>
-        <div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:1.5px solid rgba(249,115,22,.25);border-radius:var(--r2);padding:22px 24px">
-          <div style="display:flex;align-items:center;gap:12px">
-            <div style="width:40px;height:40px;background:rgba(249,115,22,.15);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">📍</div>
-            <div>
-              <div style="font-size:15px;font-weight:700;color:#c2440a">Au-delà de 25 km</div>
-              <div style="font-size:13px;color:var(--orange)">+0,50€/km supplémentaire seulement</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="zone-map-col" style="border-radius:var(--r2);overflow:hidden;box-shadow:var(--sh2);border:1.5px solid var(--line)">
-        <img src="https://i.imgur.com/j6V2aMI.png" alt="Zone d'intervention 25 km autour de Lunéville" style="width:100%;display:block;object-fit:contain;max-width:100%">
-      </div>
-    </div>
-  </div>
-</div>
-
 
 <!-- AVANTAGES -->
 <div class="sec" style="background:#eef4ff">
