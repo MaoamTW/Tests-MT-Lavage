@@ -67,7 +67,7 @@ h2.sh span{color:var(--blue2)}
 @media(max-width:760px){
   .tier-block{padding:16px 0 16px!important;overflow:visible}
   .tier-block-header{padding:0 16px}
-  .cards-grid-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;padding:0 16px 16px;scrollbar-width:none;overflow-y:visible}
+  .cards-grid-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;padding:0 16px 16px;scrollbar-width:none}
   .cards-grid-wrap::-webkit-scrollbar{display:none}
   .cards-grid{display:flex!important;flex-wrap:nowrap;gap:12px;width:max-content;padding-right:16px}
   .card{border-radius:16px!important;width:260px;min-width:260px;flex-shrink:0}
@@ -75,7 +75,7 @@ h2.sh span{color:var(--blue2)}
   .card-body-wrap .feat-list{flex:1}
   .card-body-wrap .btn-rdv{margin-top:auto}
 }
-.card:hover{transform:translateY(-8px);box-shadow:var(--sh2);border-color:rgba(37,99,235,.1)}
+@media(hover:hover){.card:hover{transform:translateY(-8px);box-shadow:var(--sh2);border-color:rgba(37,99,235,.1)}}
 .card-orange{background:linear-gradient(145deg,#c2440a,#ea580c,#f97316);color:white;border-color:transparent}
 .card-orange:hover{border-color:rgba(255,255,255,.2);box-shadow:0 14px 40px rgba(249,115,22,.4)}
 .card-ribbon{position:absolute;top:16px;right:-28px;background:rgba(0,0,0,.22);color:white;font-size:11px;font-weight:700;letter-spacing:.05em;padding:5px 38px;transform:rotate(35deg);pointer-events:none;}
