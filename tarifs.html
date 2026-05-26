@@ -70,7 +70,7 @@ h2.sh span{color:var(--blue2)}
   .cards-grid-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;padding:0 16px 16px;scrollbar-width:none;overflow-y:visible}
   .cards-grid-wrap::-webkit-scrollbar{display:none}
   .cards-grid{display:flex!important;flex-wrap:nowrap;gap:12px;width:max-content;padding-right:16px}
-  .card{border-radius:16px!important}
+  .card{border-radius:16px!important;width:260px;min-width:260px;flex-shrink:0}
   .card-body-wrap{width:100%;display:flex;flex-direction:column;flex:1}
   .card-body-wrap .feat-list{flex:1}
   .card-body-wrap .btn-rdv{margin-top:auto}
@@ -134,7 +134,7 @@ h2.sh span{color:var(--blue2)}
 .feat-premium{font-size:11px;font-weight:700;background:rgba(234,179,8,.12);color:#92400e;padding:1px 8px;border-radius:20px;margin-left:4px;flex-shrink:0}
 
 /* TABLEAU */
-.pricing-table-wrap{background:var(--white);border-radius:var(--r2);overflow:hidden;border:1.5px solid var(--line);margin-top:32px}
+.pricing-table-wrap{background:var(--white);border-radius:var(--r2);overflow:hidden;border:1.5px solid var(--line);margin-top:32px;box-shadow:var(--sh)}
 .pt-title{font-size:14px;font-weight:700;color:var(--ink);padding:15px 20px;border-bottom:1px solid var(--line)}
 .pt-head{display:grid;grid-template-columns:1fr 90px 90px 100px;padding:10px 20px;background:#f8faff;border-bottom:2px solid var(--line);font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
 .pt-col{text-align:center}.pt-col-red{color:var(--red)}.pt-col-blue{color:var(--blue2)}.pt-col-dark{color:var(--orange)}
@@ -442,7 +442,7 @@ img{transition:opacity .3s ease}
 }
 
 @media(max-width:640px){
-  .pricing-table-wrap{margin:0 -12px!important;border-radius:0!important;border-left:none!important;border-right:none!important}
+  .pricing-table-wrap{margin:0 -12px!important;border-left:none!important;border-right:none!important}
   .pricing-table-wrap table{font-size:11px!important;min-width:0!important}
   .pricing-table-wrap th,.pricing-table-wrap td{padding:6px 4px!important;font-size:11px!important}
   .pt-veh-name{font-size:11px!important;font-weight:700;white-space:normal!important}
@@ -469,7 +469,7 @@ img{transition:opacity .3s ease}
 .swipe-hint{display:none}
 @media(max-width:760px){
   .swipe-hint{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);font-weight:600;padding:0 16px;max-height:40px;opacity:1;overflow:hidden;transition:opacity .35s ease,max-height .35s ease,margin-bottom .35s ease;margin-bottom:8px}
-  .swipe-hint::after{content:'Glissez pour voir la suite ➞';display:block;color:#047A0B}
+  .swipe-hint::after{content:'Glissez pour voir la suite ➞';display:block}
 }
 </style>
 </head>
