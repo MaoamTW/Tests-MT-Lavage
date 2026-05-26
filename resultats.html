@@ -397,6 +397,18 @@ html{scroll-behavior:smooth}
 /* Smooth image loading */
 img{transition:opacity .3s ease}
 
+
+/* ── MODAL TIER CHOICE ── */
+.mb-tier-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:4px}
+.mb-tier-btn{border-radius:18px;border:2px solid var(--line);padding:20px 14px 16px;cursor:pointer;transition:.22s;display:flex;flex-direction:column;align-items:center;gap:8px;font-family:'Sora',sans-serif;background:var(--bg)}
+.mb-tier-btn:hover{transform:translateY(-3px);box-shadow:var(--sh2)}
+.mb-tier-basique{border-color:rgba(37,99,235,.2);background:linear-gradient(145deg,#eff6ff,#f0f9ff)}.mb-tier-basique:hover{border-color:var(--blue2)}
+.mb-tier-premium{border-color:rgba(180,83,9,.3);background:linear-gradient(145deg,#fffbf0,#fff8e6)}.mb-tier-premium:hover{border-color:#b45309}
+.mb-tier-label{font-size:15px;font-weight:800}.mb-tier-basique .mb-tier-label{color:var(--blue2)}.mb-tier-premium .mb-tier-label{color:#78350f}
+.mb-tier-badge{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:3px 10px;border-radius:20px}
+.mb-tier-basique .mb-tier-badge{background:rgba(37,99,235,.1);color:var(--blue2)}.mb-tier-premium .mb-tier-badge{background:rgba(180,83,9,.12);color:#92400e}
+.mb-tier-sub{font-size:11px;color:var(--muted);text-align:center;line-height:1.4}.mb-tier-price{font-size:13px;font-weight:700}
+.mb-tier-basique .mb-tier-price{color:var(--blue2)}.mb-tier-premium .mb-tier-price{color:#b45309}
 </style>
 </head>
 <body>
@@ -404,10 +416,10 @@ img{transition:opacity .3s ease}
 <nav id="nav">
   <a href="index.html" class="nav-logo"><img src="https://i.imgur.com/oPar5g4.png" alt="MT Lavage Auto"></a>
   <div class="nav-links">
-    <a href="index.html">🏠 Accueil</a>
-    <a href="tarifs.html">💶 Tarifs</a>
-    <a href="resultats.html" class="active">✨ Résultats clients</a>
-    <a href="apropos.html">👋 À propos</a>
+    <a href="index.html">Accueil</a>
+    <a href="tarifs.html">Tarifs</a>
+    <a href="resultats.html" class="active">Résultats clients</a>
+    <a href="apropos.html">À propos</a>
     <a href="faq.html">❓ FAQ</a>
   </div>
   <button class="nav-rdv" onclick="openBooking(null)">Prendre RDV</button>
@@ -415,10 +427,10 @@ img{transition:opacity .3s ease}
 </nav>
 <div class="nav-overlay" id="overlay" onclick="toggleMenu()"></div>
 <div class="nav-mobile" id="nav-mobile">
-  <a href="index.html">🏠 Accueil</a>
-  <a href="tarifs.html">💶 Tarifs</a>
-  <a href="resultats.html" class="active">✨ Résultats clients</a>
-  <a href="apropos.html">👋 À propos</a>
+  <a href="index.html">Accueil</a>
+  <a href="tarifs.html">Tarifs</a>
+  <a href="resultats.html" class="active">Résultats clients</a>
+  <a href="apropos.html">À propos</a>
   <a href="faq.html">❓ FAQ</a>
   <button class="nav-mobile-rdv" onclick="toggleMenu();openBooking(null)">📅 Prendre rendez-vous</button>
 </div>
@@ -491,7 +503,7 @@ img{transition:opacity .3s ease}
   <p>Réservez en 30 secondes — votre message est pré-rempli automatiquement.</p>
   <div class="cta-btns">
     <button class="cta-btn-main" onclick="openBooking(null)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Prendre rendez-vous</button>
-    <a href="tel:+330778043568" class="cta-btn-sec">📞 Appeler</a>
+    <a href="tel:+330778043568" class="cta-btn-sec"><img src="https://i.imgur.com/sov7ngZ.png" style="width:20px; height:auto;">Appeler</a>
   </div>
 </div>
 
@@ -507,15 +519,64 @@ img{transition:opacity .3s ease}
 <div class="modal" id="modal">
   <div class="modal-box">
     <div class="mb-progress">
-      <div class="mb-step" id="prog-1"><div class="mb-step-num">1</div><div class="mb-step-label">Formule</div></div><div class="mb-line" id="mbl-1"></div>
-      <div class="mb-step" id="prog-2"><div class="mb-step-num">2</div><div class="mb-step-label">Véhicule</div></div><div class="mb-line" id="mbl-2"></div>
-      <div class="mb-step" id="prog-25"><div class="mb-step-num">3</div><div class="mb-step-label">Options</div></div><div class="mb-line" id="mbl-25"></div>
-      <div class="mb-step" id="prog-3"><div class="mb-step-num">4</div><div class="mb-step-label">Créneau</div></div><div class="mb-line" id="mbl-3"></div>
-      <div class="mb-step" id="prog-4"><div class="mb-step-num">5</div><div class="mb-step-label">Confirmer</div></div>
+      <div class="mb-step" id="prog-0"><div class="mb-step-num">1</div><div class="mb-step-label">Niveau</div></div><div class="mb-line" id="mbl-0"></div>
+      <div class="mb-step" id="prog-1"><div class="mb-step-num">2</div><div class="mb-step-label">Formule</div></div><div class="mb-line" id="mbl-1"></div>
+      <div class="mb-step" id="prog-2"><div class="mb-step-num">3</div><div class="mb-step-label">Véhicule</div></div><div class="mb-line" id="mbl-2"></div>
+      <div class="mb-step" id="prog-25"><div class="mb-step-num">4</div><div class="mb-step-label">Options</div></div><div class="mb-line" id="mbl-25"></div>
+      <div class="mb-step" id="prog-3"><div class="mb-step-num">5</div><div class="mb-step-label">Créneau</div></div><div class="mb-line" id="mbl-3"></div>
+      <div class="mb-step" id="prog-4"><div class="mb-step-num">6</div><div class="mb-step-label">Confirmer</div></div>
     </div>
-    <div id="screen-1"><div class="mb-title">Quelle formule ?</div><div class="mb-formula-grid"><button class="mb-formula-btn mf-red" onclick="pickFormule('Intérieur')"><div class="mf-ico-wrap mf-ico-red"><img src="https://i.imgur.com/vLcJWDh.png" style="height:26px"></div><span class="mf-name">Intérieur</span><span class="mf-price">dès 45€</span></button><button class="mb-formula-btn mf-orange" onclick="pickFormule('Complet')" style="position:relative"><span class="mb-pop">🔥</span><div class="mf-ico-wrap mf-ico-orange"><img src="https://i.imgur.com/0yZv1u9.png" style="height:26px"></div><span class="mf-name">Complet</span><span class="mf-price">dès 75€</span></button><button class="mb-formula-btn mf-blue" onclick="pickFormule('Extérieur')"><div class="mf-ico-wrap mf-ico-blue"><img src="https://i.imgur.com/jEgsTM9.png" style="height:26px"></div><span class="mf-name">Extérieur</span><span class="mf-price">dès 40€</span></button></div><button class="mb-close-top" onclick="closeModal()">✕ Fermer</button></div>
-    <div id="screen-2" style="display:none"><button class="mb-back" onclick="goStep(1)">← Retour</button><div class="mb-title">Quel est votre véhicule ?</div><div class="mb-veh-grid"><button class="mb-veh-btn" onclick="pickVehicle('Citadine')"><span class="mv-emoji">🚗</span><span class="mv-name">Citadine</span><span class="mv-ex">Clio, Polo, 208…</span></button><button class="mb-veh-btn" onclick="pickVehicle('Berline & Compacte')"><span class="mv-emoji">🚙</span><span class="mv-name">Berline &amp; Compacte</span><span class="mv-ex">Golf, 308, Classe A…</span></button><button class="mb-veh-btn" onclick="pickVehicle('SUV & Monospace')"><span class="mv-emoji">🚐</span><span class="mv-name">SUV &amp; Monospace</span><span class="mv-ex">Kadjar, 3008, Q3…</span></button><button class="mb-veh-btn" onclick="pickVehicle('Utilitaire & Van')" style="border-color:rgba(249,115,22,.3);background:linear-gradient(145deg,#fff8f1,#fff0e0)"><span class="mv-emoji">🚚</span><span class="mv-name" style="color:#c2440a">Utilitaire &amp; Van</span><span class="mv-ex" style="color:var(--orange);font-weight:600">Contactez-moi</span></button></div></div>
-    <div id="screen-van" style="display:none"><button class="mb-back" onclick="goStep(2)">← Retour</button><div class="van-contact-box"><div class="van-contact-icon">🚚</div><div class="van-contact-title">Utilitaire &amp; Van</div><div class="van-contact-sub">Les tarifs pour ce type de véhicule sont établis sur devis. Contactez-moi directement par SMS ou par email.</div><div class="van-btns"><button class="van-btn-sms" onclick="contactVanSMS()">📱 SMS</button><button class="van-btn-mail" onclick="contactVanMail()">✉️ Email</button></div><button class="close-b" onclick="closeModal()">Fermer</button></div></div>
+    <div id="screen-0" style="display:none">
+      <div class="mb-title"><strong>Choisissez votre niveau</strong></div>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:18px;line-height:1.6">Le <strong style="color:#b45309">Premium</strong> inclut un nettoyage approfondi avec finitions détaillées pour un résultat encore plus propre.</p>
+      <div class="mb-tier-grid">
+        <button class="mb-tier-btn mb-tier-premium" onclick="pickTier('Premium')">
+		
+          <div class="mb-tier-label">Premium</div>
+          <div class="mb-tier-sub">Nettoyage approfondi avec finitions premium</div>
+          <div class="mb-tier-price">dès 40€</div>
+        </button>
+        <button class="mb-tier-btn mb-tier-basique" onclick="pickTier('Basique')">
+		
+          <div class="mb-tier-label">Basique</div>
+          <div class="mb-tier-sub">Nettoyage efficace pour l’entretien régulier</div>
+          <div class="mb-tier-price">dès 35€</div>
+        </button>
+      </div>
+      <button class="mb-close-top" onclick="closeModal()">✕ Fermer</button>
+    </div>
+    <div id="screen-1" style="display:none">
+      <div class="mb-title">Quelle formule ?</div>
+      <div class="mb-formula-grid">
+        <button class="mb-formula-btn mf-red" onclick="pickFormule('Intérieur')"><div class="mf-ico-wrap mf-ico-red"><img src="https://i.imgur.com/vLcJWDh.png" style="height:26px"></div><span class="mf-name">Intérieur</span><span class="mf-price">dès 45€</span></button>
+        <button class="mb-formula-btn mf-orange" onclick="pickFormule('Complet')" style="position:relative"><span class="mb-pop">🔥</span><div class="mf-ico-wrap mf-ico-orange"><img src="https://i.imgur.com/0yZv1u9.png" style="height:26px"></div><span class="mf-name">Complet</span><span class="mf-price">dès 75€</span></button>
+        <button class="mb-formula-btn mf-blue" onclick="pickFormule('Extérieur')"><div class="mf-ico-wrap mf-ico-blue"><img src="https://i.imgur.com/jEgsTM9.png" style="height:26px"></div><span class="mf-name">Extérieur</span><span class="mf-price">dès 40€</span></button>
+      </div>
+      <button class="mb-close-top" onclick="closeModal()">✕ Fermer</button>
+    </div>
+    <div id="screen-2" style="display:none">
+      <button class="mb-back" onclick="goStep(1)">← Retour</button>
+      <div class="mb-title">Quel est votre véhicule ?</div>
+      <div class="mb-veh-grid">
+        <button class="mb-veh-btn" onclick="pickVehicle('Citadine')"><span class="mv-emoji">🚗</span><span class="mv-name">Citadine</span><span class="mv-ex">Clio, Polo, 208…</span><span class="mv-price" data-veh="Citadine"></span></button>
+        <button class="mb-veh-btn" onclick="pickVehicle('Berline & Compacte')"><span class="mv-emoji">🚙</span><span class="mv-name">Berline &amp; Compacte</span><span class="mv-ex">Golf, 308, Classe A…</span><span class="mv-price" data-veh="Berline & Compacte"></span></button>
+        <button class="mb-veh-btn" onclick="pickVehicle('SUV & Monospace')"><span class="mv-emoji">🚐</span><span class="mv-name">SUV &amp; Monospace</span><span class="mv-ex">Kadjar, 3008, Q3…</span><span class="mv-price" data-veh="SUV & Monospace"></span></button>
+        <button class="mb-veh-btn" onclick="pickVehicle('Utilitaire & Van')" style="border-color:rgba(249,115,22,.3);background:linear-gradient(145deg,#fff8f1,#fff0e0)"><span class="mv-emoji">🚚</span><span class="mv-name" style="color:#c2440a">Utilitaire &amp; Van</span><span class="mv-ex" style="color:var(--orange);font-weight:600">Contactez-moi</span></button>
+      </div>
+    </div>
+    <div id="screen-van" style="display:none">
+      <button class="mb-back" onclick="goStep(2)">← Retour</button>
+      <div class="van-contact-box">
+        <div class="van-contact-icon">🚚</div>
+        <div class="van-contact-title">Utilitaire &amp; Van</div>
+        <div class="van-contact-sub">Les tarifs pour ce type de véhicule sont établis sur devis. Contactez-moi directement par SMS ou par email.</div>
+        <div class="van-btns">
+          <button class="van-btn-sms" onclick="contactVanSMS()">📱 SMS</button>
+          <button class="van-btn-mail" onclick="contactVanMail()">✉️ Email</button>
+        </div>
+        <button class="close-b" onclick="closeModal()">Fermer</button>
+      </div>
+    </div>
     <div id="screen-25" style="display:none">
       <button class="mb-back" onclick="goStep(2)">← Retour</button>
       <div class="mb-title">Option poils 🐾</div>
@@ -524,7 +585,7 @@ img{transition:opacity .3s ease}
         <p style="font-size:14px;color:var(--muted);margin-bottom:18px;line-height:1.6">Y a-t-il des <strong style="color:var(--ink)">poils d'animaux</strong> dans votre véhicule ?</p>
         <div class="poil-choices">
           <button class="poil-card poil-card-no" onclick="pickPoils(false)">
-            <div class="pc-emoji">🙅</div>
+            <div class="pc-emoji"><img src="https://i.imgur.com/iFz6ptl.png" style="width:50px; height:auto;"></div>
             <div class="pc-text">
               <div class="pc-label">Sans option poils</div>
               <div class="pc-sub2">Lavage standard inclus</div>
@@ -532,28 +593,28 @@ img{transition:opacity .3s ease}
             <div class="pc-badge pc-badge-green">Gratuit</div>
           </button>
           <button class="poil-card poil-card-yes" onclick="showPoilsLevel()">
-            <div class="pc-emoji">🐶</div>
+            <div class="pc-emoji"><img src="https://i.imgur.com/ytrVR1c.png" style="width:50px; height:auto;"></div>
             <div class="pc-text">
               <div class="pc-label">Avec option poils</div>
               
             </div>
-            <div class="pc-badge pc-badge-orange">+20 ou 35€</div>
+            <div class="pc-badge pc-badge-orange">+15 ou 25€</div>
           </button>
         </div>
         <div id="poils-level" style="display:none">
           <div class="poils-qty-sep"><span>Combien y a-t-il de poils ?</span></div>
           <div class="poils-qty-grid">
-            <button class="poils-qty-btn" onclick="pickPoilsLevel('Peu de poils',20)">
+            <button class="poils-qty-btn" onclick="pickPoilsLevel('Peu de poils',15)">
               <div class="pqb-dots pqb-few">● ●</div>
               <span class="pqb-name">Peu de poils</span>
               <span class="pqb-desc">Quelques zones</span>
-              <span class="pqb-price">+20€</span>
+              <span class="pqb-price">+15€</span>
             </button>
-            <button class="poils-qty-btn" onclick="pickPoilsLevel('Beaucoup de poils',35)">
+            <button class="poils-qty-btn" onclick="pickPoilsLevel('Beaucoup de poils',25)">
               <div class="pqb-dots pqb-many">●●●●●</div>
               <span class="pqb-name">Beaucoup</span>
               <span class="pqb-desc">Partout dedans</span>
-              <span class="pqb-price">+35€</span>
+              <span class="pqb-price">+25€</span>
             </button>
           </div>
         </div>
@@ -567,7 +628,34 @@ img{transition:opacity .3s ease}
         <button class="mb-next-btn" style="margin-top:16px" onclick="bk.poilsOption=null;goStep(3)">Continuer →</button>
       </div>
     </div>
-    <div id="screen-3" style="display:none"><button class="mb-back" onclick="goStep(25)">← Retour</button><div class="mb-title">Choisissez votre créneau</div><div class="mb-recap" id="recap-price"></div><label class="mb-label">📅 Date souhaitée</label><div class="cal-inline" id="cal-inline"><div class="cal-header"><button class="cal-nav" onclick="calNav(-1)" type="button">‹</button><span class="cal-month-label" id="cal-month-label"></span><button class="cal-nav" onclick="calNav(1)" type="button">›</button></div><div class="cal-weekdays"><span>Lu</span><span>Ma</span><span>Me</span><span>Je</span><span>Ve</span><span>Sa</span><span>Di</span></div><div class="cal-grid" id="cal-grid"></div><div class="cal-selected-display" id="cal-selected-display">Aucune date sélectionnée</div></div><label class="mb-label">⏰ Créneau horaire</label><div class="slot-grid"><button class="slot-btn" onclick="pickSlot(this,'8h30')"><span class="slot-icon">🌅</span><span class="slot-time">8h30</span><span class="slot-label">Matin</span></button><button class="slot-btn" onclick="pickSlot(this,'12h30')"><span class="slot-icon">☀️</span><span class="slot-time">12h30</span><span class="slot-label">Après-midi</span></button><button class="slot-btn" onclick="pickSlot(this,'16h30')"><span class="slot-icon">🌆</span><span class="slot-time">16h30</span><span class="slot-label">Fin de journée</span></button></div><input type="hidden" id="mb-time" value=""><div style="display:flex;align-items:flex-start;gap:10px;background:rgba(249,115,22,.07);border:1px solid rgba(249,115,22,.25);border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:12px;color:var(--ink);line-height:1.6"><span style="font-size:18px;flex-shrink:0">⚡</span><span>Pensez à vérifier qu'une <strong>prise électrique accessible</strong> est disponible à l'adresse d'intervention.</span></div><button class="mb-next-btn" onclick="goStep(4)">Suivant →</button></div>
+    <div id="screen-3" style="display:none">
+      <button class="mb-back" onclick="goStep(25)">← Retour</button>
+      <div class="mb-title">Choisissez votre créneau</div>
+      <div class="mb-recap" id="recap-price"></div>
+      <label class="mb-label">📅 Date souhaitée</label>
+      <div class="cal-inline" id="cal-inline">
+        <div class="cal-header">
+          <button class="cal-nav" onclick="calNav(-1)" type="button">‹</button>
+          <span class="cal-month-label" id="cal-month-label"></span>
+          <button class="cal-nav" onclick="calNav(1)" type="button">›</button>
+        </div>
+        <div class="cal-weekdays"><span>Lu</span><span>Ma</span><span>Me</span><span>Je</span><span>Ve</span><span>Sa</span><span>Di</span></div>
+        <div class="cal-grid" id="cal-grid"></div>
+        <div class="cal-selected-display" id="cal-selected-display">Aucune date sélectionnée</div>
+      </div>
+      <label class="mb-label">⏰ Créneau horaire</label>
+      <div class="slot-grid">
+        <button class="slot-btn" onclick="pickSlot(this,'8h30')"><span class="slot-icon">🌅</span><span class="slot-time">8h30</span><span class="slot-label">Matin</span></button>
+        <button class="slot-btn" onclick="pickSlot(this,'12h30')"><span class="slot-icon">☀️</span><span class="slot-time">12h30</span><span class="slot-label">Après-midi</span></button>
+        <button class="slot-btn" onclick="pickSlot(this,'16h30')"><span class="slot-icon">🌆</span><span class="slot-time">16h30</span><span class="slot-label">Fin de journée</span></button>
+      </div>
+      <input type="hidden" id="mb-time" value="">
+      <div style="display:flex;align-items:flex-start;gap:10px;background:rgba(249,115,22,.07);border:1px solid rgba(249,115,22,.25);border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:12px;color:var(--ink);line-height:1.6">
+        <span style="font-size:18px;flex-shrink:0">⚡</span>
+        <span>Pensez à vérifier qu'une <strong>prise électrique accessible</strong> est disponible à l'adresse d'intervention.</span>
+      </div>
+      <button class="mb-next-btn" onclick="goStep(4)">Suivant →</button>
+    </div>
     <div id="screen-4" style="display:none">
       <button class="mb-back" onclick="goStep(3)">← Retour</button>
       <div class="mb-title">✅ Récap &amp; confirmation</div>
@@ -579,13 +667,25 @@ img{transition:opacity .3s ease}
         </label>
         <input type="text" id="mb-address" class="m-field" placeholder="Ex : 12 rue des Fleurs, Lunéville 54300">
       </div>
+	  <div style="display:flex;align-items:flex-start;gap:8px;background:rgba(37,99,235,.06);border:1px solid rgba(37,99,235,.2);border-radius:10px;padding:9px 12px;font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:12px">
+        <span style="flex-shrink:0">📍</span>
+        <span>Déplacement <strong style="color:var(--ink)">gratuit jusqu'à 25 km</strong>. Au-delà : <strong style="color:var(--ink)">+0,50€/km</strong> supplémentaire.</span>
+      </div>
       <div class="addr-note">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:1px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
         <span>Une fois votre adresse confirmée, je vous demanderai des <strong>photos de votre véhicule</strong> (intérieur, extérieur, tapis…) afin d'estimer au mieux le temps de nettoyage nécessaire.</span>
       </div>
+      
+      <div style="margin-bottom:16px">
+        <label class="mb-label" style="margin-bottom:8px;display:block">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Votre prénom <span style="color:var(--red)">*</span>
+        </label>
+        <input type="text" id="mb-name" class="m-field" placeholder="Ex : Thomas" style="background:white;color:var(--ink)">
+      </div>
       <div style="margin-bottom:16px">
         <label class="mb-label" style="margin-bottom:8px;display:block">💬 Infos complémentaires <span style="font-weight:400;color:var(--muted)">(optionnel)</span></label>
-        <input type="text" id="mb-notes" class="m-field" placeholder="Ex : portail bleu, code 1234…">
+        <input type="text" id="mb-notes" class="m-field" placeholder="Ex : portail bleu, code 1234…" style="background:white;color:var(--ink)">
       </div>
       <div class="send-label">Envoyer votre demande de réservation :</div>
       <div class="send-btns">
@@ -610,38 +710,31 @@ document.querySelectorAll('.before-after').forEach(initSlider);
 
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sc',scrollY>40));
 function toggleMenu(){const b=document.getElementById('burger'),m=document.getElementById('nav-mobile'),o=document.getElementById('overlay');b.classList.toggle('open');m.classList.toggle('open');o.classList.toggle('open');}
-const TARIFS={'Intérieur':{'Citadine':45,'Berline & Compacte':50,'SUV & Monospace':55,'Utilitaire & Van':null},'Extérieur':{'Citadine':40,'Berline & Compacte':45,'SUV & Monospace':50,'Utilitaire & Van':null},'Complet':{'Citadine':75,'Berline & Compacte':85,'SUV & Monospace':95,'Utilitaire & Van':null}};
+const TARIFS_PREMIUM={'Intérieur':{'Citadine':60,'Berline & Compacte':70,'SUV & Monospace':80,'Utilitaire & Van':null},'Extérieur':{'Citadine':40,'Berline & Compacte':50,'SUV & Monospace':60,'Utilitaire & Van':null},'Complet':{'Citadine':90,'Berline & Compacte':105,'SUV & Monospace':120,'Utilitaire & Van':null}};
+const TARIFS_BASIQUE={'Intérieur':{'Citadine':45,'Berline & Compacte':55,'SUV & Monospace':65,'Utilitaire & Van':null},'Extérieur':{'Citadine':35,'Berline & Compacte':45,'SUV & Monospace':55,'Utilitaire & Van':null},'Complet':{'Citadine':70,'Berline & Compacte':85,'SUV & Monospace':100,'Utilitaire & Van':null}};
 const VEH_EMOJI={'Citadine':'🚗','Berline & Compacte':'🚙','SUV & Monospace':'🚐','Utilitaire & Van':'🚚'};
-let bk={formule:'',vehicule:'',poilsOption:null,date:'',time:'',address:'',notes:''};let calYear,calMonth,calSelected=null;
+let bk={formule:'',vehicule:'',tier:'',poilsOption:null,date:'',time:'',address:'',name:'',notes:''};
+let calYear,calMonth,calSelected=null;
 function hasInterior(f){return f==='Intérieur'||f==='Complet';}
-function getTotal(){const b=TARIFS[bk.formule]?.[bk.vehicule]??null;return b===null?null:b+(bk.poilsOption?bk.poilsOption.extra:0);}
+function getTarif(){return bk.tier==='Basique'?TARIFS_BASIQUE:TARIFS_PREMIUM;}
+function getTotal(){const b=getTarif()[bk.formule]?.[bk.vehicule]??null;return b===null?null:b+(bk.poilsOption?bk.poilsOption.extra:0);}
 function getTotalTxt(){const t=getTotal();return t!==null?t+'€':'Sur devis';}
-function openBooking(preset){bk={formule:'',vehicule:'',poilsOption:null,date:'',time:'',address:'',notes:''};calSelected=null;document.getElementById('modal').style.display='flex';if(preset){bk.formule=preset;goStep(2);}else goStep(1);}
+function openBooking(preset,tier){bk={formule:'',vehicule:'',tier:tier||'',poilsOption:null,date:'',time:'',address:'',name:'',notes:''};calSelected=null;document.getElementById('modal').style.display='flex';if(preset&&tier){bk.formule=preset;goStep(2);}else goStep(0);}
 function closeModal(){document.getElementById('modal').style.display='none';}
-function goStep(n){['screen-1','screen-2','screen-van','screen-25','screen-3','screen-4'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.display='none';});const sm={1:'screen-1',2:'screen-2','van':'screen-van',25:'screen-25',3:'screen-3',4:'screen-4'};const t=document.getElementById(sm[n]);if(t)t.style.display='block';const vo={1:1,2:2,25:3,3:4,4:5,'van':2};const cur=vo[n]||1;[1,2,25,3,4].forEach(i=>{const s=document.getElementById('prog-'+i);if(!s)return;const o=vo[i];s.classList.toggle('active',o===cur);s.classList.toggle('done',o<cur);});['mbl-1','mbl-2','mbl-25','mbl-3'].forEach((id,idx)=>{const el=document.getElementById(id);if(el)el.classList.toggle('done',cur>idx+2);});if(n===25){document.getElementById('poils-level').style.display='none';if(hasInterior(bk.formule)){document.getElementById('poils-section').style.display='block';document.getElementById('ext-section').style.display='none';}else{document.getElementById('poils-section').style.display='none';document.getElementById('ext-section').style.display='block';}}if(n===3)buildStep3();if(n===4)buildStep4();}
+function pickTier(tier){bk.tier=tier;const prices={'Intérieur':tier==='Premium'?'dès 60€':'dès 45€','Complet':tier==='Premium'?'dès 90€':'dès 70€','Extérieur':tier==='Premium'?'dès 40€':'dès 35€'};document.querySelectorAll('.mf-price').forEach(el=>{const name=el.previousElementSibling?.textContent;if(prices[name])el.textContent=prices[name];});goStep(1);}
+function goStep(n){['screen-0','screen-1','screen-2','screen-van','screen-25','screen-3','screen-4'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.display='none';});const sm={0:'screen-0',1:'screen-1',2:'screen-2','van':'screen-van',25:'screen-25',3:'screen-3',4:'screen-4'};const t=document.getElementById(sm[n]);if(t)t.style.display='block';const vo={0:1,1:2,2:3,25:4,3:5,4:6,'van':3};const cur=vo[n]||1;[0,1,2,25,3,4].forEach(i=>{const s=document.getElementById('prog-'+i);if(!s)return;const o=vo[i];s.classList.toggle('active',o===cur);s.classList.toggle('done',o<cur);});['mbl-0','mbl-1','mbl-2','mbl-25','mbl-3'].forEach((id,idx)=>{const el=document.getElementById(id);if(el)el.classList.toggle('done',cur>idx+2);});if(n===25){document.getElementById('poils-level').style.display='none';if(hasInterior(bk.formule)){document.getElementById('poils-section').style.display='block';document.getElementById('ext-section').style.display='none';}else{document.getElementById('poils-section').style.display='none';document.getElementById('ext-section').style.display='block';}}if(n===3)buildStep3();if(n===4)buildStep4();}
 function pickFormule(f){bk.formule=f;goStep(2);}
 function pickVehicle(v){bk.vehicule=v;if(v==='Utilitaire & Van'){goStep('van');return;}goStep(25);}
-function contactVanSMS(){window.location.href=`sms:+330778043568?body=${encodeURIComponent(`Bonjour,\n\nJe souhaite obtenir un devis pour un lavage ${bk.formule} sur un Utilitaire / Van.\n\nMerci de me recontacter.\n\nCordialement`)}`;}
-function contactVanMail(){window.location.href=`mailto:mt.lavage.auto.54@gmail.com?subject=Devis Lavage Utilitaire / Van&body=${encodeURIComponent(`Bonjour,\n\nJe souhaite obtenir un devis pour un lavage ${bk.formule} sur un Utilitaire / Van.\n\nMerci de me recontacter.\n\nCordialement`)}`;}
+function contactVanSMS(){window.location.href='sms:+330778043568?body='+encodeURIComponent('Bonjour,\n\nJe souhaite obtenir un devis pour un lavage '+bk.formule+' sur un Utilitaire / Van.\n\nMerci de me recontacter.\n\nCordialement');}
+function contactVanMail(){window.location.href='mailto:mt.lavage.auto.54@gmail.com?subject=Devis Lavage Utilitaire / Van&body='+encodeURIComponent('Bonjour,\n\nJe souhaite obtenir un devis pour un lavage '+bk.formule+' sur un Utilitaire / Van.\n\nMerci de me recontacter.\n\nCordialement');}
 function pickPoils(w){if(!w){bk.poilsOption=null;goStep(3);}else showPoilsLevel();}
 function showPoilsLevel(){document.getElementById('poils-level').style.display='block';}
 function pickPoilsLevel(label,extra){bk.poilsOption={label,extra};goStep(3);}
 function pickSlot(btn,val){document.querySelectorAll('.slot-btn').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');document.getElementById('mb-time').value=val;bk.time=val;}
-function buildStep3(){const pi=bk.poilsOption?` + 🐾 ${bk.poilsOption.label}`:'';document.getElementById('recap-price').innerHTML=`<span>${bk.formule}${pi} · ${VEH_EMOJI[bk.vehicule]||''} ${bk.vehicule}</span><span class="recap-price-tag">${getTotalTxt()}</span>`;document.querySelectorAll('.slot-btn').forEach(b=>b.classList.remove('selected'));document.getElementById('mb-time').value='';bk.time='';setTimeout(()=>initCal(),10);}
-function buildStep4(){bk.date=calSelected||'';bk.time=document.getElementById('mb-time').value;if(!bk.date){alert('Veuillez choisir une date.');goStep(3);return;}if(!bk.time){alert('Veuillez choisir un créneau horaire.');goStep(3);return;}
-  const pr=bk.poilsOption?'<div class="recap-row"><strong>🐾 Option</strong><span class="rv">'+bk.poilsOption.label+' (+'+bk.poilsOption.extra+'€)</span></div>':'';
-  const total=getTotalTxt();
-  document.getElementById('recap-full').innerHTML=
-    '<div class="recap-row"><strong>🧽 Formule</strong><span class="rv">'+bk.formule+'</span></div>'+
-    '<div class="recap-row"><strong>'+(VEH_EMOJI[bk.vehicule]||'🚗')+' Véhicule</strong><span class="rv">'+bk.vehicule+'</span></div>'+
-    pr+
-    '<div class="recap-row"><strong>📅 Date</strong><span class="rv">'+fmtDate(bk.date)+'</span></div>'+
-    '<div class="recap-row"><strong>⏰ Créneau</strong><span class="rv">'+bk.time+'</span></div>'+
-    '<div class="recap-total"><span class="recap-total-label">Prix estimé</span><span class="recap-total-price">'+total+'</span></div>';
-  if(bk.address)document.getElementById('mb-address').value=bk.address;
-}
-function fmtDate(d){if(!d)return'';const[y,m,j]=d.split('-');return`${j}/${m}/${y}`;}
-function sendBooking(type){bk.address=document.getElementById('mb-address').value.trim();bk.notes=document.getElementById('mb-notes').value.trim();if(!bk.address){alert('Veuillez renseigner votre adresse.');return;}const pl=bk.poilsOption?`\n🐾 Option poils : ${bk.poilsOption.label} (+${bk.poilsOption.extra}€)`:'';const msg=`Bonjour,\n\nJe souhaite réserver une prestation MT Lavage Auto.\n\n🧽 Formule : ${bk.formule}${pl}\n${VEH_EMOJI[bk.vehicule]||''} Véhicule : ${bk.vehicule}\n📅 Date : ${fmtDate(bk.date)}\n⏰ Créneau : ${bk.time}\n📍 Adresse : ${bk.address}\n💶 Prix estimé : ${getTotalTxt()}${bk.notes?'\n💬 Notes : '+bk.notes:''}\n\nMerci de confirmer la disponibilité.\n\nCordialement`;if(type==='sms')window.location.href=`sms:+330778043568?body=${encodeURIComponent(msg)}`;else window.location.href=`mailto:mt.lavage.auto.54@gmail.com?subject=RDV Lavage - ${bk.formule} - ${bk.vehicule}&body=${encodeURIComponent(msg)}`;}
+function buildStep3(){const pi=bk.poilsOption?' + 🐾 '+bk.poilsOption.label:'';const tierLabel=bk.tier?' ('+bk.tier+')':'';document.getElementById('recap-price').innerHTML='<span>'+bk.formule+tierLabel+pi+' · '+(VEH_EMOJI[bk.vehicule]||'')+' '+bk.vehicule+'</span><span class="recap-price-tag">'+getTotalTxt()+'</span>';document.querySelectorAll('.slot-btn').forEach(b=>b.classList.remove('selected'));document.getElementById('mb-time').value='';bk.time='';setTimeout(()=>initCal(),10);}
+function buildStep4(){bk.date=calSelected||'';bk.time=document.getElementById('mb-time').value;if(!bk.date){alert('Veuillez choisir une date.');goStep(3);return;}if(!bk.time){alert('Veuillez choisir un créneau horaire.');goStep(3);return;}const pr=bk.poilsOption?'<div class="recap-row"><strong>🐾 Option</strong><span class="rv">'+bk.poilsOption.label+' (+'+bk.poilsOption.extra+'€)</span></div>':'';const total=getTotalTxt();document.getElementById('recap-full').innerHTML='<div class="recap-row"><strong>⭐ Niveau</strong><span class="rv">'+bk.tier+'</span></div>'+'<div class="recap-row"><strong>🧽 Formule</strong><span class="rv">'+bk.formule+'</span></div>'+'<div class="recap-row"><strong>'+(VEH_EMOJI[bk.vehicule]||'🚗')+' Véhicule</strong><span class="rv">'+bk.vehicule+'</span></div>'+pr+'<div class="recap-row"><strong>📅 Date</strong><span class="rv">'+fmtDate(bk.date)+'</span></div>'+'<div class="recap-row"><strong>⏰ Créneau</strong><span class="rv">'+bk.time+'</span></div>'+'<div class="recap-total"><span class="recap-total-label">Prix estimé</span><span class="recap-total-price">'+total+'</span></div>';if(bk.address)document.getElementById('mb-address').value=bk.address;if(bk.name)document.getElementById('mb-name').value=bk.name;}
+function fmtDate(d){if(!d)return'';const[y,m,j]=d.split('-');return j+'/'+m+'/'+y;}
+function sendBooking(type){bk.address=document.getElementById('mb-address').value.trim();bk.name=document.getElementById('mb-name').value.trim();bk.notes=document.getElementById('mb-notes').value.trim();if(!bk.address){alert('Veuillez renseigner votre adresse.');return;}if(!bk.name){alert('Veuillez renseigner votre prénom.');return;}const pl=bk.poilsOption?'\n🐾 Option poils : '+bk.poilsOption.label+' (+'+bk.poilsOption.extra+'€)':'';const msg='Bonjour,\n\nJe souhaite réserver une prestation MT Lavage Auto.\n\n👤 Prénom : '+bk.name+'\n⭐ Niveau : '+bk.tier+'\n🧽 Formule : '+bk.formule+pl+'\n'+(VEH_EMOJI[bk.vehicule]||'')+' Véhicule : '+bk.vehicule+'\n📅 Date : '+fmtDate(bk.date)+'\n⏰ Créneau : '+bk.time+'\n📍 Adresse : '+bk.address+'\n💶 Prix estimé : '+getTotalTxt()+(bk.notes?'\n💬 Notes : '+bk.notes:'')+'\n\nMerci de confirmer la disponibilité.\n\nCordialement';if(type==='sms')window.location.href='sms:+330778043568?body='+encodeURIComponent(msg);else window.location.href='mailto:mt.lavage.auto.54@gmail.com?subject=RDV Lavage - '+bk.formule+' - '+bk.vehicule+'&body='+encodeURIComponent(msg);}
 document.getElementById('modal').addEventListener('click',e=>{if(e.target===e.currentTarget)closeModal();});
 function initCal(){if(!calYear){const now=new Date();calYear=now.getFullYear();calMonth=now.getMonth();}renderCal();}
 function calNav(dir){calMonth+=dir;if(calMonth>11){calMonth=0;calYear++;}if(calMonth<0){calMonth=11;calYear--;}renderCal();}
